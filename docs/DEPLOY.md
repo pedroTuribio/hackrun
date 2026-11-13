@@ -10,9 +10,11 @@ Tempo estimado: 20 a 30 minutos. Nenhuma senha ou chave deve ser colada em chat,
 2. No menu lateral, abra **SQL Editor** → **New query**.
 3. Copie todo o conteúdo de `db/schema.sql`, cole e clique em **Run**. Isso cria as tabelas e liga a segurança (RLS).
 4. Abra outra query, cole o conteúdo de `db/seed.sql` e clique em **Run**. Isso carrega as 10 lojas e os produtos fictícios.
-5. Vá em **Project Settings → API** (ou **Data API**) e copie:
-   - **Project URL** → será `SUPABASE_URL`
-   - **service_role key** (secreta) → será `SUPABASE_SERVICE_ROLE_KEY`
+5. Vá em **Project Settings → API Keys** e copie a chave **secreta**:
+   - aba **API Keys** → **Secret keys** → `sb_secret_...` (ou, na aba **Legacy**, a `service_role`) → será `SUPABASE_SERVICE_ROLE_KEY`
+   - **Project URL** (em **Project Settings → Data API**) → será `SUPABASE_URL`
+
+   > Projeto do time já criado (conta indiomau40, região São Paulo): `SUPABASE_URL = https://vfltkwawdicqqeryvyll.supabase.co`. Tabelas e catálogo já carregados — pule os passos 1 a 4.
 
    A chave service_role só pode ficar no servidor (Vercel). Nunca no front-end, no GitHub ou em mensagens.
 

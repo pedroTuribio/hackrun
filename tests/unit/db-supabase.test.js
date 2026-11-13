@@ -22,7 +22,17 @@ describe('db-supabase.js — REST do Supabase (fetch simulado)', () => {
     assert.match(c.url, /^https:\/\/exemplo\.supabase\.co\/rest\/v1\/stores\?select=id,name,segment,floor,unit,hours/);
     assert.ok(!c.url.includes('code'), 'listStores não pede o código da loja');
     assert.equal(c.init.headers.apikey, KEY);
-    assert.equal(c.init.headers.Authorization, `Bearer ${KEY}`);
+    assert.equal(c.init.headers.Authorization, undefined, 'chave nova (não JWT) vai só no apikey');
+  });
+
+  test('chave antiga JWT (service_role) vai também no Authorization', async () => {
+    stub = stubFetch(() => json([]));
+    const jwt = 'eyJhbGciOiJIUzI1NiJ9.e30.assinatura';
+    const dbi = createSupabaseDb({ url: URL_, key: jwt });
+    await dbi.listStores();
+    const h = stub.calls[0].init.headers;
+    assert.equal(h.apikey, jwt);
+    assert.equal(h.Authorization, `Bearer ${jwt}`);
   });
 
   test('preço e estoque em texto viram número; tags nulas viram lista', async () => {
