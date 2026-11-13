@@ -1,0 +1,11 @@
+services:
+  ponte:
+    build: .
+    container_name: ponte
+    ports:
+      - "3000:3000"
+    # As chaves ficam no arquivo .env (fora do Git). Sem .env, roda em modo demonstração.
+    env_file:
+      - path: .env
+        required: false
+    restart: unless-stopped
