@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "node scripts/dev.js",
-    "test": "node --test tests/unit/",
+    "test": "node --test tests/unit/*.test.js",
     "test:e2e": "npx playwright test",
     "seed": "node scripts/gen-seed.js"
   }
