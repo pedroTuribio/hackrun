@@ -129,6 +129,18 @@ describe('ai.js — Gemini simulado (fetch falso)', () => {
     assert.equal(out.confidence, 'media');
   });
 
+  test('interpret(): preço em texto no formato brasileiro ("1.299,00", "R$ 489,90", "1.299")', async () => {
+    const cases = [['1.299,00', 1299], ['R$ 489,90', 489.9], ['1.299', 1299], ['499.9', 499.9], [1299, 1299], ['grátis', null], [0, null]];
+    for (const [given, want] of cases) {
+      stub = stubFetch(() => geminiResponse({ name: 'notebook', keywords: ['notebook'], onlinePrice: given, maxPrice: given }));
+      const out = await ai.interpret({ query: 'notebook' });
+      assert.equal(out.onlinePrice, want, `onlinePrice ${JSON.stringify(given)}`);
+      assert.equal(out.maxPrice, want, `maxPrice ${JSON.stringify(given)}`);
+      stub.restore();
+    }
+    stub = null;
+  });
+
   test('confiança baixa da IA gera aviso (warning)', async () => {
     stub = stubFetch((url, init) => geminiResponse(isRank(init)
       ? { results: [{ id: 'tecnoponto-01', match: 'parecido', reason: 'Parece ser este' }] }
