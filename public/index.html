@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ponte — Viu online? Resolve hoje no shopping.</title>
+  <meta name="description" content="Mande a foto ou o print do produto que você viu na internet e descubra qual loja do shopping tem hoje. Separe e retire sem cadastro.">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="color-scheme" content="light">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Ponte">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Cg fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 22h22M6 18.5c3-7 17-7 20 0M10.5 22v-7M16 22v-9.5M21.5 22v-7'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="/icon.svg">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="client">
+  <a class="skip-link" href="#app">Pular para o conteúdo</a>
+
+  <main id="app" class="app" tabindex="-1" aria-live="polite">
+    <noscript>
+      <div class="page"><div class="card">Ative o JavaScript para usar a Ponte.</div></div>
+    </noscript>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Navegação principal">
+    <a href="#/" data-nav="home">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <span>Buscar</span>
+    </a>
+    <a href="#/reservas" data-nav="reservas">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v4a3 3 0 0 0 0 6v4H4v-4a3 3 0 0 0 0-6z"/><path d="M14 6v2M14 11v2M14 16v2"/></svg>
+      <span>Reservas</span>
+      <b class="nav-badge" data-badge="reservas" hidden></b>
+    </a>
+    <a href="#/roteiro" data-nav="roteiro">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h8.5a3.5 3.5 0 0 0 0-7h-9a3.5 3.5 0 0 1 0-7H16"/></svg>
+      <span>Roteiro</span>
+      <b class="nav-badge" data-badge="roteiro" hidden></b>
+    </a>
+  </nav>
+
+  <input id="photo-input" type="file" accept="image/*" hidden>
+
+  <dialog id="reserve-sheet" class="sheet" aria-labelledby="reserve-title">
+    <form method="dialog" class="sheet-body" id="reserve-form" novalidate>
+      <div class="sheet-grip" aria-hidden="true"></div>
+      <h2 id="reserve-title">Separar na loja</h2>
+      <p class="muted small" id="reserve-product"></p>
+      <fieldset class="seg" style="border:0;padding:0;margin:0">
+        <legend class="sr-only">O que você quer</legend>
+        <div class="seg-opt">
+          <input type="radio" name="type" id="type-separar" value="separar" checked>
+          <label for="type-separar">Separa pra mim</label>
+        </div>
+        <div class="seg-opt">
+          <input type="radio" name="type" id="type-testar" value="testar">
+          <label for="type-testar">Quero testar</label>
+        </div>
+      </fieldset>
+      <div>
+        <label class="field-label" for="nickname">Como a loja te chama?</label>
+        <input class="input" id="nickname" name="nickname" type="text" maxlength="30" autocomplete="nickname" autocapitalize="words" enterkeyhint="send" placeholder="Ex.: Ana, Léo, Tia Rô" required aria-describedby="nickname-hint">
+        <p class="field-hint" id="nickname-hint">Só um apelido para a loja te chamar no balcão. Sem cadastro.</p>
+        <p class="field-error" id="nickname-error" hidden></p>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-outline" value="cancel" data-close>Cancelar</button>
+        <button type="submit" class="btn btn-primary" id="reserve-submit">Enviar pedido</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
