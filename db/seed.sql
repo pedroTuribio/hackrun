@@ -17,7 +17,7 @@ on conflict (id) do update set code = excluded.code, name = excluded.name, segme
   floor = excluded.floor, unit = excluded.unit, hours = excluded.hours;
 
 insert into products (id, store_id, name, category, segment, brand, color, price, stock, tags, description) values
-  ('sommax-01', 'sommax', 'Fone Bluetooth com ANC Pulse 700', 'Fones de ouvido', 'Eletrônicos', 'Sonora', 'Preto', 499, 5, array['fone', 'headphone', 'bluetooth', 'sem fio', 'cancelamento de ruído', 'anc', 'over-ear', 'sonora pulse 700']::text[], 'Headphone over-ear sem fio com cancelamento ativo de ruído, 30 h de bateria e carregamento USB-C.'),
+  ('sommax-01', 'sommax', 'Fone Bluetooth com ANC Pulse 700', 'Fones de ouvido', 'Eletrônicos', 'Sonora', 'Preto', 499, 5, array['fone', 'headphone', 'bluetooth', 'sem fio', 'cancelamento de ruído', 'anc', 'over-ear']::text[], 'Headphone over-ear sem fio com cancelamento ativo de ruído, 30 h de bateria e carregamento USB-C.'),
   ('sommax-02', 'sommax', 'Fone Bluetooth Pulse 500', 'Fones de ouvido', 'Eletrônicos', 'Sonora', 'Preto', 299, 0, array['fone', 'headphone', 'bluetooth', 'sem fio', 'over-ear']::text[], 'Headphone sem fio confortável, sem cancelamento de ruído, 25 h de bateria.'),
   ('sommax-03', 'sommax', 'Fone Intra-auricular Buds Lite', 'Fones de ouvido', 'Eletrônicos', 'Sonora', 'Branco', 179.9, 7, array['fone', 'earbuds', 'tws', 'bluetooth', 'sem fio', 'intra-auricular', 'in-ear']::text[], 'Fone in-ear sem fio com estojo carregador e resistência a respingos.'),
   ('sommax-04', 'sommax', 'Fone com Fio Básico P2', 'Fones de ouvido', 'Eletrônicos', 'Sonora', 'Preto', 49.9, 8, array['fone', 'com fio', 'p2', 'intra-auricular', 'microfone']::text[], 'Fone de ouvido com fio, conector P2 e microfone para chamadas.'),
