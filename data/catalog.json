@@ -1,0 +1,2317 @@
+{
+  "stores": [
+    {
+      "id": "sommax",
+      "code": "SOM112",
+      "name": "SomMax",
+      "segment": "Eletrônicos",
+      "floor": 1,
+      "unit": "112",
+      "hours": "10h–22h"
+    },
+    {
+      "id": "tecnoponto",
+      "code": "TEC204",
+      "name": "TecnoPonto",
+      "segment": "Eletrônicos e Informática",
+      "floor": 2,
+      "unit": "204",
+      "hours": "10h–22h"
+    },
+    {
+      "id": "vitrine",
+      "code": "VIT118",
+      "name": "Vitrine Moda",
+      "segment": "Moda",
+      "floor": 1,
+      "unit": "118",
+      "hours": "10h–22h"
+    },
+    {
+      "id": "passofirme",
+      "code": "PAS125",
+      "name": "Passo Firme",
+      "segment": "Calçados",
+      "floor": 1,
+      "unit": "125",
+      "hours": "10h–22h"
+    },
+    {
+      "id": "essencia",
+      "code": "ESS210",
+      "name": "Essência Viva",
+      "segment": "Beleza e Perfumaria",
+      "floor": 2,
+      "unit": "210",
+      "hours": "10h–22h"
+    },
+    {
+      "id": "larecia",
+      "code": "LAR305",
+      "name": "Lar & Cia",
+      "segment": "Casa",
+      "floor": 3,
+      "unit": "305",
+      "hours": "10h–22h"
+    },
+    {
+      "id": "arena",
+      "code": "ARE221",
+      "name": "Arena Esportes",
+      "segment": "Esportes",
+      "floor": 2,
+      "unit": "221",
+      "hours": "10h–22h"
+    },
+    {
+      "id": "paginacerta",
+      "code": "PAG312",
+      "name": "Página Certa",
+      "segment": "Livraria e Papelaria",
+      "floor": 3,
+      "unit": "312",
+      "hours": "10h–22h"
+    },
+    {
+      "id": "nivelgames",
+      "code": "NIV232",
+      "name": "Nível Games",
+      "segment": "Games",
+      "floor": 2,
+      "unit": "232",
+      "hours": "10h–22h"
+    },
+    {
+      "id": "mundoencantado",
+      "code": "MUN318",
+      "name": "Mundo Encantado",
+      "segment": "Infantil e Brinquedos",
+      "floor": 3,
+      "unit": "318",
+      "hours": "10h–22h"
+    }
+  ],
+  "products": [
+    {
+      "id": "sommax-01",
+      "store_id": "sommax",
+      "name": "Fone Bluetooth com ANC Pulse 700",
+      "category": "Fones de ouvido",
+      "segment": "Eletrônicos",
+      "brand": "Sonora",
+      "color": "Preto",
+      "price": 499,
+      "stock": 5,
+      "tags": [
+        "fone",
+        "headphone",
+        "bluetooth",
+        "sem fio",
+        "cancelamento de ruído",
+        "anc",
+        "over-ear",
+        "sonora pulse 700"
+      ],
+      "description": "Headphone over-ear sem fio com cancelamento ativo de ruído, 30 h de bateria e carregamento USB-C."
+    },
+    {
+      "id": "sommax-02",
+      "store_id": "sommax",
+      "name": "Fone Bluetooth Pulse 500",
+      "category": "Fones de ouvido",
+      "segment": "Eletrônicos",
+      "brand": "Sonora",
+      "color": "Preto",
+      "price": 299,
+      "stock": 0,
+      "tags": [
+        "fone",
+        "headphone",
+        "bluetooth",
+        "sem fio",
+        "over-ear"
+      ],
+      "description": "Headphone sem fio confortável, sem cancelamento de ruído, 25 h de bateria."
+    },
+    {
+      "id": "sommax-03",
+      "store_id": "sommax",
+      "name": "Fone Intra-auricular Buds Lite",
+      "category": "Fones de ouvido",
+      "segment": "Eletrônicos",
+      "brand": "Sonora",
+      "color": "Branco",
+      "price": 179.9,
+      "stock": 7,
+      "tags": [
+        "fone",
+        "earbuds",
+        "tws",
+        "bluetooth",
+        "sem fio",
+        "intra-auricular",
+        "in-ear"
+      ],
+      "description": "Fone in-ear sem fio com estojo carregador e resistência a respingos."
+    },
+    {
+      "id": "sommax-04",
+      "store_id": "sommax",
+      "name": "Fone com Fio Básico P2",
+      "category": "Fones de ouvido",
+      "segment": "Eletrônicos",
+      "brand": "Sonora",
+      "color": "Preto",
+      "price": 49.9,
+      "stock": 8,
+      "tags": [
+        "fone",
+        "com fio",
+        "p2",
+        "intra-auricular",
+        "microfone"
+      ],
+      "description": "Fone de ouvido com fio, conector P2 e microfone para chamadas."
+    },
+    {
+      "id": "sommax-05",
+      "store_id": "sommax",
+      "name": "Caixa de Som Bluetooth Boom 20W",
+      "category": "Caixas de som",
+      "segment": "Eletrônicos",
+      "brand": "Sonora",
+      "color": "Azul",
+      "price": 329,
+      "stock": 4,
+      "tags": [
+        "caixa de som",
+        "speaker",
+        "bluetooth",
+        "sem fio",
+        "à prova d'água",
+        "portátil"
+      ],
+      "description": "Caixa de som portátil à prova d'água, 20 W e 12 h de bateria."
+    },
+    {
+      "id": "sommax-06",
+      "store_id": "sommax",
+      "name": "Soundbar Cine 2.1",
+      "category": "Caixas de som",
+      "segment": "Eletrônicos",
+      "brand": "Sonora",
+      "color": "Preto",
+      "price": 899,
+      "stock": 2,
+      "tags": [
+        "soundbar",
+        "home theater",
+        "tv",
+        "caixa de som",
+        "subwoofer"
+      ],
+      "description": "Soundbar 2.1 com subwoofer sem fio e conexão HDMI ARC."
+    },
+    {
+      "id": "sommax-07",
+      "store_id": "sommax",
+      "name": "Smartwatch Fit 3",
+      "category": "Smartwatch",
+      "segment": "Eletrônicos",
+      "brand": "Vértice",
+      "color": "Preto",
+      "price": 649,
+      "stock": 3,
+      "tags": [
+        "smartwatch",
+        "relógio inteligente",
+        "relógio",
+        "monitor cardíaco",
+        "gps",
+        "notificações"
+      ],
+      "description": "Relógio inteligente com GPS, monitor cardíaco e tela AMOLED de 1,4\"."
+    },
+    {
+      "id": "sommax-08",
+      "store_id": "sommax",
+      "name": "Smart Band 5",
+      "category": "Smartwatch",
+      "segment": "Eletrônicos",
+      "brand": "Vértice",
+      "color": "Preto",
+      "price": 199,
+      "stock": 6,
+      "tags": [
+        "smartband",
+        "pulseira inteligente",
+        "relógio",
+        "passos",
+        "sono"
+      ],
+      "description": "Pulseira inteligente que mede passos, sono e batimentos."
+    },
+    {
+      "id": "sommax-09",
+      "store_id": "sommax",
+      "name": "Celular V12 128GB",
+      "category": "Celulares",
+      "segment": "Eletrônicos",
+      "brand": "Vértice",
+      "color": "Azul",
+      "price": 1599,
+      "stock": 3,
+      "tags": [
+        "celular",
+        "smartphone",
+        "128gb",
+        "android",
+        "câmera dupla"
+      ],
+      "description": "Smartphone Android com 128 GB, 6 GB de RAM e câmera dupla de 50 MP."
+    },
+    {
+      "id": "sommax-10",
+      "store_id": "sommax",
+      "name": "Tablet Tab 10 64GB",
+      "category": "Tablets",
+      "segment": "Eletrônicos",
+      "brand": "Vértice",
+      "color": "Cinza",
+      "price": 1199,
+      "stock": 2,
+      "tags": [
+        "tablet",
+        "64gb",
+        "android",
+        "tela 10"
+      ],
+      "description": "Tablet com tela de 10\", 64 GB e bateria para o dia todo."
+    },
+    {
+      "id": "sommax-11",
+      "store_id": "sommax",
+      "name": "Carregador Turbo USB-C 25W",
+      "category": "Carregadores e cabos",
+      "segment": "Eletrônicos",
+      "brand": "Volta",
+      "color": "Branco",
+      "price": 89.9,
+      "stock": 8,
+      "tags": [
+        "carregador",
+        "usb-c",
+        "turbo",
+        "fonte",
+        "tomada"
+      ],
+      "description": "Carregador de parede com carregamento rápido de 25 W."
+    },
+    {
+      "id": "sommax-12",
+      "store_id": "sommax",
+      "name": "Power Bank 10.000 mAh",
+      "category": "Carregadores e cabos",
+      "segment": "Eletrônicos",
+      "brand": "Volta",
+      "color": "Preto",
+      "price": 149.9,
+      "stock": 5,
+      "tags": [
+        "power bank",
+        "bateria externa",
+        "carregador portátil",
+        "usb-c"
+      ],
+      "description": "Bateria externa de 10.000 mAh com duas saídas USB."
+    },
+    {
+      "id": "tecnoponto-01",
+      "store_id": "tecnoponto",
+      "name": "Headphone Bluetooth Cancelamento de Ruído Q45",
+      "category": "Fones de ouvido",
+      "segment": "Eletrônicos e Informática",
+      "brand": "Auralis",
+      "color": "Preto",
+      "price": 459,
+      "stock": 4,
+      "tags": [
+        "fone",
+        "headphone",
+        "bluetooth",
+        "sem fio",
+        "cancelamento de ruído",
+        "anc",
+        "over-ear"
+      ],
+      "description": "Headphone sem fio com cancelamento ativo de ruído, 35 h de bateria e modo ambiente."
+    },
+    {
+      "id": "tecnoponto-02",
+      "store_id": "tecnoponto",
+      "name": "Fone Intra-auricular Buds Pro",
+      "category": "Fones de ouvido",
+      "segment": "Eletrônicos e Informática",
+      "brand": "Auralis",
+      "color": "Preto",
+      "price": 199,
+      "stock": 6,
+      "tags": [
+        "fone",
+        "earbuds",
+        "tws",
+        "bluetooth",
+        "sem fio",
+        "intra-auricular",
+        "in-ear"
+      ],
+      "description": "Fone in-ear sem fio com estojo e graves reforçados."
+    },
+    {
+      "id": "tecnoponto-03",
+      "store_id": "tecnoponto",
+      "name": "Notebook Book 14 i5 8GB 256GB SSD",
+      "category": "Notebooks",
+      "segment": "Eletrônicos e Informática",
+      "brand": "Vértice",
+      "color": "Prata",
+      "price": 3299,
+      "stock": 3,
+      "tags": [
+        "notebook",
+        "laptop",
+        "computador",
+        "i5",
+        "ssd",
+        "8gb",
+        "trabalho",
+        "estudo"
+      ],
+      "description": "Notebook leve de 14\" com Core i5, 8 GB de RAM e SSD de 256 GB."
+    },
+    {
+      "id": "tecnoponto-04",
+      "store_id": "tecnoponto",
+      "name": "Notebook Gamer Titã 15 RTX",
+      "category": "Notebooks",
+      "segment": "Eletrônicos e Informática",
+      "brand": "Titã",
+      "color": "Preto",
+      "price": 6499,
+      "stock": 1,
+      "tags": [
+        "notebook",
+        "laptop",
+        "gamer",
+        "rtx",
+        "i7",
+        "16gb",
+        "jogos"
+      ],
+      "description": "Notebook gamer 15,6\" com placa de vídeo RTX, i7 e 16 GB de RAM."
+    },
+    {
+      "id": "tecnoponto-05",
+      "store_id": "tecnoponto",
+      "name": "Smartwatch Watch S",
+      "category": "Smartwatch",
+      "segment": "Eletrônicos e Informática",
+      "brand": "Auralis",
+      "color": "Preto",
+      "price": 599,
+      "stock": 4,
+      "tags": [
+        "smartwatch",
+        "relógio inteligente",
+        "relógio",
+        "monitor cardíaco",
+        "notificações"
+      ],
+      "description": "Relógio inteligente com tela colorida, notificações e 10 dias de bateria."
+    },
+    {
+      "id": "tecnoponto-06",
+      "store_id": "tecnoponto",
+      "name": "Mouse sem Fio M2",
+      "category": "Acessórios de informática",
+      "segment": "Eletrônicos e Informática",
+      "brand": "Auralis",
+      "color": "Preto",
+      "price": 79.9,
+      "stock": 8,
+      "tags": [
+        "mouse",
+        "sem fio",
+        "wireless",
+        "computador"
+      ],
+      "description": "Mouse sem fio silencioso com receptor USB."
+    },
+    {
+      "id": "tecnoponto-07",
+      "store_id": "tecnoponto",
+      "name": "Teclado Mecânico K7",
+      "category": "Acessórios de informática",
+      "segment": "Eletrônicos e Informática",
+      "brand": "Auralis",
+      "color": "Preto",
+      "price": 299,
+      "stock": 5,
+      "tags": [
+        "teclado",
+        "mecânico",
+        "rgb",
+        "computador"
+      ],
+      "description": "Teclado mecânico ABNT2 com iluminação RGB."
+    },
+    {
+      "id": "tecnoponto-08",
+      "store_id": "tecnoponto",
+      "name": "Monitor 24\" Full HD",
+      "category": "Monitores",
+      "segment": "Eletrônicos e Informática",
+      "brand": "Lumina",
+      "color": "Preto",
+      "price": 899,
+      "stock": 3,
+      "tags": [
+        "monitor",
+        "tela",
+        "full hd",
+        "24 polegadas",
+        "hdmi"
+      ],
+      "description": "Monitor IPS de 24\" Full HD com bordas finas."
+    },
+    {
+      "id": "tecnoponto-09",
+      "store_id": "tecnoponto",
+      "name": "Webcam Full HD",
+      "category": "Acessórios de informática",
+      "segment": "Eletrônicos e Informática",
+      "brand": "Auralis",
+      "color": "Preto",
+      "price": 249,
+      "stock": 0,
+      "tags": [
+        "webcam",
+        "câmera",
+        "full hd",
+        "reunião",
+        "home office"
+      ],
+      "description": "Webcam 1080p com microfone embutido."
+    },
+    {
+      "id": "tecnoponto-10",
+      "store_id": "tecnoponto",
+      "name": "SSD Externo 1TB",
+      "category": "Armazenamento",
+      "segment": "Eletrônicos e Informática",
+      "brand": "Volta",
+      "color": "Cinza",
+      "price": 549,
+      "stock": 4,
+      "tags": [
+        "ssd",
+        "hd externo",
+        "1tb",
+        "armazenamento",
+        "usb-c"
+      ],
+      "description": "SSD portátil de 1 TB com USB-C."
+    },
+    {
+      "id": "tecnoponto-11",
+      "store_id": "tecnoponto",
+      "name": "Mochila para Notebook 15,6\"",
+      "category": "Mochilas",
+      "segment": "Eletrônicos e Informática",
+      "brand": "Trilha",
+      "color": "Cinza",
+      "price": 189.9,
+      "stock": 5,
+      "tags": [
+        "mochila",
+        "notebook",
+        "bolsa",
+        "impermeável",
+        "trabalho"
+      ],
+      "description": "Mochila com compartimento acolchoado para notebook de até 15,6\"."
+    },
+    {
+      "id": "tecnoponto-12",
+      "store_id": "tecnoponto",
+      "name": "Roteador Wi-Fi 6 Dual Band",
+      "category": "Redes",
+      "segment": "Eletrônicos e Informática",
+      "brand": "Lumina",
+      "color": "Branco",
+      "price": 399,
+      "stock": 3,
+      "tags": [
+        "roteador",
+        "wifi",
+        "wi-fi 6",
+        "internet",
+        "rede"
+      ],
+      "description": "Roteador Wi-Fi 6 dual band para casas de até 120 m²."
+    },
+    {
+      "id": "vitrine-01",
+      "store_id": "vitrine",
+      "name": "Camiseta Básica Algodão",
+      "category": "Camisetas",
+      "segment": "Moda",
+      "brand": "Brisa",
+      "color": "Branco",
+      "price": 59.9,
+      "stock": 8,
+      "tags": [
+        "camiseta",
+        "camisa",
+        "básica",
+        "algodão",
+        "unissex"
+      ],
+      "description": "Camiseta 100% algodão, corte reto."
+    },
+    {
+      "id": "vitrine-02",
+      "store_id": "vitrine",
+      "name": "Camiseta Estampada Cerrado",
+      "category": "Camisetas",
+      "segment": "Moda",
+      "brand": "Brisa",
+      "color": "Preto",
+      "price": 79.9,
+      "stock": 6,
+      "tags": [
+        "camiseta",
+        "camisa",
+        "estampada",
+        "algodão"
+      ],
+      "description": "Camiseta com estampa inspirada no cerrado tocantinense."
+    },
+    {
+      "id": "vitrine-03",
+      "store_id": "vitrine",
+      "name": "Calça Jeans Skinny Feminina",
+      "category": "Calças",
+      "segment": "Moda",
+      "brand": "Brisa",
+      "color": "Azul",
+      "price": 189.9,
+      "stock": 5,
+      "tags": [
+        "calça",
+        "jeans",
+        "skinny",
+        "feminina"
+      ],
+      "description": "Calça jeans skinny com elastano, cintura alta."
+    },
+    {
+      "id": "vitrine-04",
+      "store_id": "vitrine",
+      "name": "Calça Jeans Reta Masculina",
+      "category": "Calças",
+      "segment": "Moda",
+      "brand": "Brisa",
+      "color": "Azul",
+      "price": 199.9,
+      "stock": 4,
+      "tags": [
+        "calça",
+        "jeans",
+        "reta",
+        "masculina"
+      ],
+      "description": "Calça jeans de corte reto, lavagem média."
+    },
+    {
+      "id": "vitrine-05",
+      "store_id": "vitrine",
+      "name": "Vestido Midi Floral",
+      "category": "Vestidos",
+      "segment": "Moda",
+      "brand": "Brisa",
+      "color": "Estampado",
+      "price": 229.9,
+      "stock": 3,
+      "tags": [
+        "vestido",
+        "midi",
+        "floral",
+        "feminino"
+      ],
+      "description": "Vestido midi em viscose com estampa floral."
+    },
+    {
+      "id": "vitrine-06",
+      "store_id": "vitrine",
+      "name": "Jaqueta Jeans Unissex",
+      "category": "Jaquetas",
+      "segment": "Moda",
+      "brand": "Brisa",
+      "color": "Azul",
+      "price": 279.9,
+      "stock": 2,
+      "tags": [
+        "jaqueta",
+        "jeans",
+        "casaco",
+        "unissex"
+      ],
+      "description": "Jaqueta jeans clássica com botões metálicos."
+    },
+    {
+      "id": "vitrine-07",
+      "store_id": "vitrine",
+      "name": "Moletom com Capuz",
+      "category": "Jaquetas",
+      "segment": "Moda",
+      "brand": "Brisa",
+      "color": "Cinza",
+      "price": 169.9,
+      "stock": 0,
+      "tags": [
+        "moletom",
+        "blusa",
+        "capuz",
+        "casaco",
+        "unissex"
+      ],
+      "description": "Moletom flanelado com capuz e bolso canguru."
+    },
+    {
+      "id": "vitrine-08",
+      "store_id": "vitrine",
+      "name": "Bermuda Sarja Masculina",
+      "category": "Bermudas",
+      "segment": "Moda",
+      "brand": "Brisa",
+      "color": "Bege",
+      "price": 119.9,
+      "stock": 6,
+      "tags": [
+        "bermuda",
+        "sarja",
+        "masculina",
+        "short"
+      ],
+      "description": "Bermuda de sarja com elastano."
+    },
+    {
+      "id": "vitrine-09",
+      "store_id": "vitrine",
+      "name": "Óculos de Sol Aviador",
+      "category": "Óculos",
+      "segment": "Moda",
+      "brand": "Solaris",
+      "color": "Dourado",
+      "price": 249.9,
+      "stock": 4,
+      "tags": [
+        "óculos",
+        "óculos de sol",
+        "aviador",
+        "proteção uv"
+      ],
+      "description": "Óculos de sol aviador com lentes com proteção UV400."
+    },
+    {
+      "id": "vitrine-10",
+      "store_id": "vitrine",
+      "name": "Bolsa Transversal",
+      "category": "Bolsas",
+      "segment": "Moda",
+      "brand": "Brisa",
+      "color": "Caramelo",
+      "price": 159.9,
+      "stock": 5,
+      "tags": [
+        "bolsa",
+        "transversal",
+        "feminina",
+        "couro sintético"
+      ],
+      "description": "Bolsa transversal em couro sintético com alça ajustável."
+    },
+    {
+      "id": "vitrine-11",
+      "store_id": "vitrine",
+      "name": "Mochila Casual Urbana",
+      "category": "Mochilas",
+      "segment": "Moda",
+      "brand": "Brisa",
+      "color": "Preto",
+      "price": 149.9,
+      "stock": 4,
+      "tags": [
+        "mochila",
+        "casual",
+        "urbana",
+        "bolsa"
+      ],
+      "description": "Mochila urbana com bolso frontal e alças acolchoadas."
+    },
+    {
+      "id": "vitrine-12",
+      "store_id": "vitrine",
+      "name": "Perfume Noite Masculino 100ml",
+      "category": "Perfumes",
+      "segment": "Moda",
+      "brand": "Brisa",
+      "color": "Incolor",
+      "price": 189.9,
+      "stock": 3,
+      "tags": [
+        "perfume",
+        "fragrância",
+        "amadeirado",
+        "masculino",
+        "eau de toilette",
+        "colônia"
+      ],
+      "description": "Fragrância masculina amadeirada com notas de vetiver e pimenta."
+    },
+    {
+      "id": "passofirme-01",
+      "store_id": "passofirme",
+      "name": "Tênis de Corrida Run 2 Masculino",
+      "category": "Tênis de corrida",
+      "segment": "Calçados",
+      "brand": "Impulso",
+      "color": "Preto",
+      "price": 399.9,
+      "stock": 5,
+      "tags": [
+        "tênis",
+        "corrida",
+        "running",
+        "amortecimento",
+        "esportivo",
+        "masculino"
+      ],
+      "description": "Tênis de corrida com amortecimento em espuma e cabedal respirável."
+    },
+    {
+      "id": "passofirme-02",
+      "store_id": "passofirme",
+      "name": "Tênis de Corrida Run 2 Feminino",
+      "category": "Tênis de corrida",
+      "segment": "Calçados",
+      "brand": "Impulso",
+      "color": "Rosa",
+      "price": 399.9,
+      "stock": 0,
+      "tags": [
+        "tênis",
+        "corrida",
+        "running",
+        "amortecimento",
+        "esportivo",
+        "feminino"
+      ],
+      "description": "Tênis de corrida feminino com amortecimento e cabedal respirável."
+    },
+    {
+      "id": "passofirme-03",
+      "store_id": "passofirme",
+      "name": "Tênis de Caminhada Leve",
+      "category": "Tênis de corrida",
+      "segment": "Calçados",
+      "brand": "Andar",
+      "color": "Cinza",
+      "price": 279.9,
+      "stock": 5,
+      "tags": [
+        "tênis",
+        "caminhada",
+        "corrida",
+        "leve",
+        "esportivo",
+        "unissex"
+      ],
+      "description": "Tênis leve para caminhada e corridas curtas."
+    },
+    {
+      "id": "passofirme-04",
+      "store_id": "passofirme",
+      "name": "Tênis Casual Couro Branco",
+      "category": "Tênis casual",
+      "segment": "Calçados",
+      "brand": "Passeio",
+      "color": "Branco",
+      "price": 259.9,
+      "stock": 6,
+      "tags": [
+        "tênis",
+        "casual",
+        "couro",
+        "sapatênis",
+        "unissex"
+      ],
+      "description": "Tênis casual de couro, sola de borracha costurada."
+    },
+    {
+      "id": "passofirme-05",
+      "store_id": "passofirme",
+      "name": "Tênis Skate Lona",
+      "category": "Tênis casual",
+      "segment": "Calçados",
+      "brand": "Passeio",
+      "color": "Preto",
+      "price": 179.9,
+      "stock": 4,
+      "tags": [
+        "tênis",
+        "skate",
+        "lona",
+        "casual"
+      ],
+      "description": "Tênis de lona estilo skate."
+    },
+    {
+      "id": "passofirme-06",
+      "store_id": "passofirme",
+      "name": "Sapatênis Masculino",
+      "category": "Sapatos",
+      "segment": "Calçados",
+      "brand": "Passeio",
+      "color": "Marrom",
+      "price": 219.9,
+      "stock": 4,
+      "tags": [
+        "sapatênis",
+        "sapato",
+        "casual",
+        "masculino"
+      ],
+      "description": "Sapatênis em camurça sintética."
+    },
+    {
+      "id": "passofirme-07",
+      "store_id": "passofirme",
+      "name": "Sapato Social Masculino Couro",
+      "category": "Sapatos",
+      "segment": "Calçados",
+      "brand": "Passeio",
+      "color": "Preto",
+      "price": 329.9,
+      "stock": 2,
+      "tags": [
+        "sapato",
+        "social",
+        "couro",
+        "masculino"
+      ],
+      "description": "Sapato social em couro legítimo."
+    },
+    {
+      "id": "passofirme-08",
+      "store_id": "passofirme",
+      "name": "Sandália Rasteira Feminina",
+      "category": "Sandálias",
+      "segment": "Calçados",
+      "brand": "Passeio",
+      "color": "Dourado",
+      "price": 89.9,
+      "stock": 8,
+      "tags": [
+        "sandália",
+        "rasteira",
+        "rasteirinha",
+        "feminina"
+      ],
+      "description": "Rasteirinha com tiras metalizadas."
+    },
+    {
+      "id": "passofirme-09",
+      "store_id": "passofirme",
+      "name": "Sapatilha Feminina",
+      "category": "Sapatos",
+      "segment": "Calçados",
+      "brand": "Passeio",
+      "color": "Preto",
+      "price": 99.9,
+      "stock": 6,
+      "tags": [
+        "sapatilha",
+        "sapato",
+        "feminina",
+        "confortável"
+      ],
+      "description": "Sapatilha com palmilha macia."
+    },
+    {
+      "id": "passofirme-10",
+      "store_id": "passofirme",
+      "name": "Bota Coturno Feminina",
+      "category": "Botas",
+      "segment": "Calçados",
+      "brand": "Passeio",
+      "color": "Preto",
+      "price": 299.9,
+      "stock": 3,
+      "tags": [
+        "bota",
+        "coturno",
+        "feminina"
+      ],
+      "description": "Coturno com solado tratorado."
+    },
+    {
+      "id": "passofirme-11",
+      "store_id": "passofirme",
+      "name": "Chinelo Slide Conforto",
+      "category": "Sandálias",
+      "segment": "Calçados",
+      "brand": "Andar",
+      "color": "Preto",
+      "price": 59.9,
+      "stock": 8,
+      "tags": [
+        "chinelo",
+        "slide",
+        "sandália",
+        "unissex"
+      ],
+      "description": "Chinelo slide com palmilha anatômica."
+    },
+    {
+      "id": "passofirme-12",
+      "store_id": "passofirme",
+      "name": "Tênis Infantil com LED",
+      "category": "Tênis casual",
+      "segment": "Calçados",
+      "brand": "Passeio",
+      "color": "Azul",
+      "price": 159.9,
+      "stock": 5,
+      "tags": [
+        "tênis",
+        "infantil",
+        "led",
+        "criança"
+      ],
+      "description": "Tênis infantil com luzes de LED no solado."
+    },
+    {
+      "id": "essencia-01",
+      "store_id": "essencia",
+      "name": "Perfume Amadeirado Masculino Cedro Real 100ml",
+      "category": "Perfumes",
+      "segment": "Beleza e Perfumaria",
+      "brand": "Aroma Nobre",
+      "color": "Incolor",
+      "price": 259.9,
+      "stock": 4,
+      "tags": [
+        "perfume",
+        "fragrância",
+        "amadeirado",
+        "masculino",
+        "eau de parfum",
+        "colônia"
+      ],
+      "description": "Eau de parfum masculino amadeirado com cedro e âmbar."
+    },
+    {
+      "id": "essencia-02",
+      "store_id": "essencia",
+      "name": "Perfume Amadeirado Couro & Âmbar 50ml",
+      "category": "Perfumes",
+      "segment": "Beleza e Perfumaria",
+      "brand": "Aroma Nobre",
+      "color": "Incolor",
+      "price": 199.9,
+      "stock": 0,
+      "tags": [
+        "perfume",
+        "fragrância",
+        "amadeirado",
+        "masculino",
+        "eau de parfum"
+      ],
+      "description": "Eau de parfum amadeirado intenso com notas de couro."
+    },
+    {
+      "id": "essencia-03",
+      "store_id": "essencia",
+      "name": "Perfume Floral Feminino Jardim 75ml",
+      "category": "Perfumes",
+      "segment": "Beleza e Perfumaria",
+      "brand": "Aroma Nobre",
+      "color": "Incolor",
+      "price": 229.9,
+      "stock": 5,
+      "tags": [
+        "perfume",
+        "fragrância",
+        "floral",
+        "feminino",
+        "eau de parfum"
+      ],
+      "description": "Perfume feminino floral com jasmim e flor de laranjeira."
+    },
+    {
+      "id": "essencia-04",
+      "store_id": "essencia",
+      "name": "Perfume Cítrico Unissex Verão 100ml",
+      "category": "Perfumes",
+      "segment": "Beleza e Perfumaria",
+      "brand": "Flor do Cerrado",
+      "color": "Incolor",
+      "price": 179.9,
+      "stock": 3,
+      "tags": [
+        "perfume",
+        "fragrância",
+        "cítrico",
+        "unissex",
+        "eau de toilette",
+        "colônia"
+      ],
+      "description": "Fragrância cítrica e refrescante para o calor."
+    },
+    {
+      "id": "essencia-05",
+      "store_id": "essencia",
+      "name": "Base Líquida Matte",
+      "category": "Maquiagem",
+      "segment": "Beleza e Perfumaria",
+      "brand": "Cor Viva",
+      "color": "Bege",
+      "price": 69.9,
+      "stock": 8,
+      "tags": [
+        "base",
+        "maquiagem",
+        "matte",
+        "pele"
+      ],
+      "description": "Base líquida de alta cobertura com acabamento matte."
+    },
+    {
+      "id": "essencia-06",
+      "store_id": "essencia",
+      "name": "Paleta de Sombras 12 Cores",
+      "category": "Maquiagem",
+      "segment": "Beleza e Perfumaria",
+      "brand": "Cor Viva",
+      "color": "Multicolorido",
+      "price": 89.9,
+      "stock": 5,
+      "tags": [
+        "sombra",
+        "paleta",
+        "maquiagem",
+        "olhos"
+      ],
+      "description": "Paleta com 12 sombras foscas e cintilantes."
+    },
+    {
+      "id": "essencia-07",
+      "store_id": "essencia",
+      "name": "Batom Matte Vermelho",
+      "category": "Maquiagem",
+      "segment": "Beleza e Perfumaria",
+      "brand": "Cor Viva",
+      "color": "Vermelho",
+      "price": 39.9,
+      "stock": 8,
+      "tags": [
+        "batom",
+        "maquiagem",
+        "matte",
+        "boca"
+      ],
+      "description": "Batom líquido matte de longa duração."
+    },
+    {
+      "id": "essencia-08",
+      "store_id": "essencia",
+      "name": "Protetor Solar Facial FPS 50",
+      "category": "Cuidados com a pele",
+      "segment": "Beleza e Perfumaria",
+      "brand": "Flor do Cerrado",
+      "color": "Branco",
+      "price": 79.9,
+      "stock": 7,
+      "tags": [
+        "protetor solar",
+        "filtro solar",
+        "fps 50",
+        "rosto",
+        "skincare"
+      ],
+      "description": "Protetor solar facial com toque seco."
+    },
+    {
+      "id": "essencia-09",
+      "store_id": "essencia",
+      "name": "Hidratante Corporal 400ml",
+      "category": "Cuidados com a pele",
+      "segment": "Beleza e Perfumaria",
+      "brand": "Flor do Cerrado",
+      "color": "Branco",
+      "price": 49.9,
+      "stock": 8,
+      "tags": [
+        "hidratante",
+        "creme",
+        "corpo",
+        "skincare"
+      ],
+      "description": "Loção hidratante com manteiga de cupuaçu."
+    },
+    {
+      "id": "essencia-10",
+      "store_id": "essencia",
+      "name": "Kit Shampoo e Condicionador",
+      "category": "Cabelos",
+      "segment": "Beleza e Perfumaria",
+      "brand": "Flor do Cerrado",
+      "color": "Verde",
+      "price": 69.9,
+      "stock": 6,
+      "tags": [
+        "shampoo",
+        "condicionador",
+        "cabelo",
+        "kit"
+      ],
+      "description": "Kit para cabelos cacheados com óleo de buriti."
+    },
+    {
+      "id": "essencia-11",
+      "store_id": "essencia",
+      "name": "Secador de Cabelo 2000W",
+      "category": "Cabelos",
+      "segment": "Beleza e Perfumaria",
+      "brand": "Vento",
+      "color": "Preto",
+      "price": 229.9,
+      "stock": 3,
+      "tags": [
+        "secador",
+        "cabelo",
+        "2000w",
+        "íons"
+      ],
+      "description": "Secador profissional com tecnologia de íons."
+    },
+    {
+      "id": "essencia-12",
+      "store_id": "essencia",
+      "name": "Prancha Alisadora Cerâmica",
+      "category": "Cabelos",
+      "segment": "Beleza e Perfumaria",
+      "brand": "Vento",
+      "color": "Rosa",
+      "price": 179.9,
+      "stock": 4,
+      "tags": [
+        "chapinha",
+        "prancha",
+        "alisador",
+        "cabelo"
+      ],
+      "description": "Prancha com placas de cerâmica e controle de temperatura."
+    },
+    {
+      "id": "larecia-01",
+      "store_id": "larecia",
+      "name": "Air Fryer 4L",
+      "category": "Eletroportáteis",
+      "segment": "Casa",
+      "brand": "Cozinha Fácil",
+      "color": "Preto",
+      "price": 399.9,
+      "stock": 4,
+      "tags": [
+        "air fryer",
+        "fritadeira",
+        "fritadeira elétrica sem óleo",
+        "cozinha"
+      ],
+      "description": "Fritadeira sem óleo de 4 litros com timer."
+    },
+    {
+      "id": "larecia-02",
+      "store_id": "larecia",
+      "name": "Cafeteira 30 Xícaras",
+      "category": "Eletroportáteis",
+      "segment": "Casa",
+      "brand": "Cozinha Fácil",
+      "color": "Preto",
+      "price": 149.9,
+      "stock": 5,
+      "tags": [
+        "cafeteira",
+        "café",
+        "cozinha"
+      ],
+      "description": "Cafeteira com jarra de vidro e função manter aquecido."
+    },
+    {
+      "id": "larecia-03",
+      "store_id": "larecia",
+      "name": "Liquidificador 1200W",
+      "category": "Eletroportáteis",
+      "segment": "Casa",
+      "brand": "Cozinha Fácil",
+      "color": "Vermelho",
+      "price": 189.9,
+      "stock": 3,
+      "tags": [
+        "liquidificador",
+        "vitamina",
+        "suco",
+        "cozinha"
+      ],
+      "description": "Liquidificador com 12 velocidades e copo de 3 litros."
+    },
+    {
+      "id": "larecia-04",
+      "store_id": "larecia",
+      "name": "Aspirador de Pó Vertical",
+      "category": "Eletroportáteis",
+      "segment": "Casa",
+      "brand": "Casa Bela",
+      "color": "Cinza",
+      "price": 299.9,
+      "stock": 0,
+      "tags": [
+        "aspirador",
+        "limpeza",
+        "vertical"
+      ],
+      "description": "Aspirador vertical 2 em 1 com filtro HEPA."
+    },
+    {
+      "id": "larecia-05",
+      "store_id": "larecia",
+      "name": "Ventilador de Mesa 40cm",
+      "category": "Eletroportáteis",
+      "segment": "Casa",
+      "brand": "Casa Bela",
+      "color": "Branco",
+      "price": 219.9,
+      "stock": 3,
+      "tags": [
+        "ventilador",
+        "calor",
+        "mesa"
+      ],
+      "description": "Ventilador de 40 cm com 6 pás e 3 velocidades."
+    },
+    {
+      "id": "larecia-06",
+      "store_id": "larecia",
+      "name": "Jogo de Panelas Antiaderente 5 Peças",
+      "category": "Cozinha",
+      "segment": "Casa",
+      "brand": "Cozinha Fácil",
+      "color": "Grafite",
+      "price": 349.9,
+      "stock": 2,
+      "tags": [
+        "panela",
+        "jogo de panelas",
+        "antiaderente",
+        "cozinha"
+      ],
+      "description": "Conjunto com 5 panelas antiaderentes e tampas de vidro."
+    },
+    {
+      "id": "larecia-07",
+      "store_id": "larecia",
+      "name": "Garrafa Térmica Inox 1L",
+      "category": "Cozinha",
+      "segment": "Casa",
+      "brand": "Casa Bela",
+      "color": "Prata",
+      "price": 99.9,
+      "stock": 7,
+      "tags": [
+        "garrafa térmica",
+        "garrafa",
+        "inox",
+        "café"
+      ],
+      "description": "Garrafa térmica de aço inox que mantém a temperatura por 12 h."
+    },
+    {
+      "id": "larecia-08",
+      "store_id": "larecia",
+      "name": "Jogo de Cama Casal 4 Peças",
+      "category": "Cama e banho",
+      "segment": "Casa",
+      "brand": "Casa Bela",
+      "color": "Branco",
+      "price": 199.9,
+      "stock": 5,
+      "tags": [
+        "lençol",
+        "jogo de cama",
+        "casal",
+        "algodão"
+      ],
+      "description": "Jogo de cama 150 fios com lençol, elástico e fronhas."
+    },
+    {
+      "id": "larecia-09",
+      "store_id": "larecia",
+      "name": "Toalha de Banho Algodão",
+      "category": "Cama e banho",
+      "segment": "Casa",
+      "brand": "Casa Bela",
+      "color": "Azul",
+      "price": 49.9,
+      "stock": 8,
+      "tags": [
+        "toalha",
+        "banho",
+        "algodão"
+      ],
+      "description": "Toalha de banho felpuda 100% algodão."
+    },
+    {
+      "id": "larecia-10",
+      "store_id": "larecia",
+      "name": "Luminária de Mesa LED",
+      "category": "Decoração",
+      "segment": "Casa",
+      "brand": "Casa Bela",
+      "color": "Preto",
+      "price": 119.9,
+      "stock": 4,
+      "tags": [
+        "luminária",
+        "abajur",
+        "led",
+        "escritório"
+      ],
+      "description": "Luminária articulada com 3 tons de luz."
+    },
+    {
+      "id": "larecia-11",
+      "store_id": "larecia",
+      "name": "Vaso Decorativo Cerâmica",
+      "category": "Decoração",
+      "segment": "Casa",
+      "brand": "Casa Bela",
+      "color": "Terracota",
+      "price": 79.9,
+      "stock": 6,
+      "tags": [
+        "vaso",
+        "decoração",
+        "cerâmica",
+        "planta"
+      ],
+      "description": "Vaso de cerâmica artesanal."
+    },
+    {
+      "id": "larecia-12",
+      "store_id": "larecia",
+      "name": "Kit Organizador de Gavetas",
+      "category": "Organização",
+      "segment": "Casa",
+      "brand": "Casa Bela",
+      "color": "Branco",
+      "price": 59.9,
+      "stock": 8,
+      "tags": [
+        "organizador",
+        "gaveta",
+        "organização"
+      ],
+      "description": "Kit com 6 divisórias plásticas."
+    },
+    {
+      "id": "arena-01",
+      "store_id": "arena",
+      "name": "Tênis de Corrida Pro Masculino",
+      "category": "Tênis de corrida",
+      "segment": "Esportes",
+      "brand": "Veloz",
+      "color": "Azul",
+      "price": 349.9,
+      "stock": 4,
+      "tags": [
+        "tênis",
+        "corrida",
+        "running",
+        "amortecimento",
+        "esportivo",
+        "masculino"
+      ],
+      "description": "Tênis de corrida com placa de propulsão e solado aderente."
+    },
+    {
+      "id": "arena-02",
+      "store_id": "arena",
+      "name": "Tênis de Corrida Pro Feminino",
+      "category": "Tênis de corrida",
+      "segment": "Esportes",
+      "brand": "Veloz",
+      "color": "Branco",
+      "price": 349.9,
+      "stock": 3,
+      "tags": [
+        "tênis",
+        "corrida",
+        "running",
+        "amortecimento",
+        "esportivo",
+        "feminino"
+      ],
+      "description": "Tênis de corrida feminino leve com amortecimento responsivo."
+    },
+    {
+      "id": "arena-03",
+      "store_id": "arena",
+      "name": "Smartwatch Esportivo GPS Run",
+      "category": "Smartwatch",
+      "segment": "Esportes",
+      "brand": "Veloz",
+      "color": "Preto",
+      "price": 799,
+      "stock": 2,
+      "tags": [
+        "smartwatch",
+        "relógio inteligente",
+        "relógio",
+        "gps",
+        "corrida",
+        "monitor cardíaco"
+      ],
+      "description": "Relógio esportivo com GPS, planos de treino e 14 dias de bateria."
+    },
+    {
+      "id": "arena-04",
+      "store_id": "arena",
+      "name": "Mochila de Hidratação 20L",
+      "category": "Mochilas",
+      "segment": "Esportes",
+      "brand": "Trilha",
+      "color": "Verde",
+      "price": 219.9,
+      "stock": 3,
+      "tags": [
+        "mochila",
+        "hidratação",
+        "trilha",
+        "bike",
+        "esportiva"
+      ],
+      "description": "Mochila esportiva com reservatório de água de 2 litros."
+    },
+    {
+      "id": "arena-05",
+      "store_id": "arena",
+      "name": "Bola de Futebol de Campo",
+      "category": "Bolas",
+      "segment": "Esportes",
+      "brand": "Veloz",
+      "color": "Branco",
+      "price": 129.9,
+      "stock": 6,
+      "tags": [
+        "bola",
+        "futebol",
+        "campo"
+      ],
+      "description": "Bola de futebol de campo costurada à mão."
+    },
+    {
+      "id": "arena-06",
+      "store_id": "arena",
+      "name": "Camisa Dry Fit Treino",
+      "category": "Roupas esportivas",
+      "segment": "Esportes",
+      "brand": "Veloz",
+      "color": "Preto",
+      "price": 89.9,
+      "stock": 8,
+      "tags": [
+        "camisa",
+        "camiseta",
+        "dry fit",
+        "treino",
+        "academia"
+      ],
+      "description": "Camisa de treino que seca rápido."
+    },
+    {
+      "id": "arena-07",
+      "store_id": "arena",
+      "name": "Legging Fitness Feminina",
+      "category": "Roupas esportivas",
+      "segment": "Esportes",
+      "brand": "Veloz",
+      "color": "Preto",
+      "price": 119.9,
+      "stock": 5,
+      "tags": [
+        "legging",
+        "calça",
+        "academia",
+        "fitness",
+        "feminina"
+      ],
+      "description": "Legging de cintura alta com tecido compressivo."
+    },
+    {
+      "id": "arena-08",
+      "store_id": "arena",
+      "name": "Garrafa Squeeze 750ml",
+      "category": "Acessórios esportivos",
+      "segment": "Esportes",
+      "brand": "Veloz",
+      "color": "Azul",
+      "price": 39.9,
+      "stock": 8,
+      "tags": [
+        "garrafa",
+        "squeeze",
+        "água",
+        "academia"
+      ],
+      "description": "Squeeze livre de BPA."
+    },
+    {
+      "id": "arena-09",
+      "store_id": "arena",
+      "name": "Par de Halteres 2kg",
+      "category": "Musculação",
+      "segment": "Esportes",
+      "brand": "Veloz",
+      "color": "Preto",
+      "price": 89.9,
+      "stock": 4,
+      "tags": [
+        "halter",
+        "halteres",
+        "peso",
+        "musculação",
+        "academia"
+      ],
+      "description": "Par de halteres emborrachados de 2 kg."
+    },
+    {
+      "id": "arena-10",
+      "store_id": "arena",
+      "name": "Tapete de Yoga",
+      "category": "Acessórios esportivos",
+      "segment": "Esportes",
+      "brand": "Veloz",
+      "color": "Roxo",
+      "price": 99.9,
+      "stock": 5,
+      "tags": [
+        "tapete",
+        "yoga",
+        "pilates",
+        "colchonete"
+      ],
+      "description": "Tapete antiderrapante de 6 mm."
+    },
+    {
+      "id": "arena-11",
+      "store_id": "arena",
+      "name": "Corda de Pular",
+      "category": "Acessórios esportivos",
+      "segment": "Esportes",
+      "brand": "Veloz",
+      "color": "Preto",
+      "price": 29.9,
+      "stock": 8,
+      "tags": [
+        "corda",
+        "pular",
+        "treino",
+        "crossfit"
+      ],
+      "description": "Corda de pular com rolamento."
+    },
+    {
+      "id": "arena-12",
+      "store_id": "arena",
+      "name": "Bicicleta Aro 29 MTB",
+      "category": "Bicicletas",
+      "segment": "Esportes",
+      "brand": "Trilha",
+      "color": "Vermelho",
+      "price": 1899,
+      "stock": 1,
+      "tags": [
+        "bicicleta",
+        "bike",
+        "mtb",
+        "aro 29",
+        "mountain bike"
+      ],
+      "description": "Mountain bike aro 29 com 21 marchas e freio a disco."
+    },
+    {
+      "id": "paginacerta-01",
+      "store_id": "paginacerta",
+      "name": "Livro O Rio que Corta a Serra",
+      "category": "Livros",
+      "segment": "Livraria e Papelaria",
+      "brand": "Editora Capim Dourado",
+      "color": "Colorido",
+      "price": 59.9,
+      "stock": 5,
+      "tags": [
+        "livro",
+        "romance",
+        "literatura",
+        "ficção"
+      ],
+      "description": "Romance de estreia ambientado no Jalapão."
+    },
+    {
+      "id": "paginacerta-02",
+      "store_id": "paginacerta",
+      "name": "Box Fantasia 3 Volumes",
+      "category": "Livros",
+      "segment": "Livraria e Papelaria",
+      "brand": "Editora Capim Dourado",
+      "color": "Colorido",
+      "price": 149.9,
+      "stock": 3,
+      "tags": [
+        "livro",
+        "box",
+        "fantasia",
+        "coleção"
+      ],
+      "description": "Box com a trilogia completa de fantasia."
+    },
+    {
+      "id": "paginacerta-03",
+      "store_id": "paginacerta",
+      "name": "Livro Culinária do Cerrado",
+      "category": "Livros",
+      "segment": "Livraria e Papelaria",
+      "brand": "Editora Capim Dourado",
+      "color": "Colorido",
+      "price": 89.9,
+      "stock": 4,
+      "tags": [
+        "livro",
+        "culinária",
+        "receitas",
+        "cerrado"
+      ],
+      "description": "Receitas regionais com pequi, baru e buriti."
+    },
+    {
+      "id": "paginacerta-04",
+      "store_id": "paginacerta",
+      "name": "Livro Infantil Ilustrado",
+      "category": "Livros",
+      "segment": "Livraria e Papelaria",
+      "brand": "Editora Capim Dourado",
+      "color": "Colorido",
+      "price": 39.9,
+      "stock": 6,
+      "tags": [
+        "livro",
+        "infantil",
+        "ilustrado",
+        "criança"
+      ],
+      "description": "Livro ilustrado para leitura em família."
+    },
+    {
+      "id": "paginacerta-05",
+      "store_id": "paginacerta",
+      "name": "Leitor Digital 6\"",
+      "category": "Leitores digitais",
+      "segment": "Livraria e Papelaria",
+      "brand": "Lumina",
+      "color": "Preto",
+      "price": 549,
+      "stock": 2,
+      "tags": [
+        "e-reader",
+        "leitor digital",
+        "livro digital",
+        "ebook"
+      ],
+      "description": "Leitor de livros digitais com tela sem reflexo e luz embutida."
+    },
+    {
+      "id": "paginacerta-06",
+      "store_id": "paginacerta",
+      "name": "Caderno Universitário 10 Matérias",
+      "category": "Papelaria",
+      "segment": "Livraria e Papelaria",
+      "brand": "Traço",
+      "color": "Azul",
+      "price": 39.9,
+      "stock": 8,
+      "tags": [
+        "caderno",
+        "escola",
+        "faculdade",
+        "papelaria"
+      ],
+      "description": "Caderno espiral com 200 folhas."
+    },
+    {
+      "id": "paginacerta-07",
+      "store_id": "paginacerta",
+      "name": "Agenda 2027",
+      "category": "Papelaria",
+      "segment": "Livraria e Papelaria",
+      "brand": "Traço",
+      "color": "Preto",
+      "price": 49.9,
+      "stock": 6,
+      "tags": [
+        "agenda",
+        "2027",
+        "organização",
+        "papelaria"
+      ],
+      "description": "Agenda diária com capa dura."
+    },
+    {
+      "id": "paginacerta-08",
+      "store_id": "paginacerta",
+      "name": "Planner Semanal",
+      "category": "Papelaria",
+      "segment": "Livraria e Papelaria",
+      "brand": "Traço",
+      "color": "Rosa",
+      "price": 44.9,
+      "stock": 0,
+      "tags": [
+        "planner",
+        "organização",
+        "semanal",
+        "papelaria"
+      ],
+      "description": "Planner semanal sem data."
+    },
+    {
+      "id": "paginacerta-09",
+      "store_id": "paginacerta",
+      "name": "Kit Canetas Coloridas 24 Cores",
+      "category": "Papelaria",
+      "segment": "Livraria e Papelaria",
+      "brand": "Traço",
+      "color": "Multicolorido",
+      "price": 34.9,
+      "stock": 8,
+      "tags": [
+        "caneta",
+        "canetas coloridas",
+        "escola",
+        "papelaria"
+      ],
+      "description": "Kit com 24 canetas de ponta fina."
+    },
+    {
+      "id": "paginacerta-10",
+      "store_id": "paginacerta",
+      "name": "Calculadora Científica",
+      "category": "Papelaria",
+      "segment": "Livraria e Papelaria",
+      "brand": "Traço",
+      "color": "Preto",
+      "price": 79.9,
+      "stock": 4,
+      "tags": [
+        "calculadora",
+        "científica",
+        "escola",
+        "faculdade"
+      ],
+      "description": "Calculadora científica com 240 funções."
+    },
+    {
+      "id": "paginacerta-11",
+      "store_id": "paginacerta",
+      "name": "Mochila Escolar Juvenil",
+      "category": "Mochilas",
+      "segment": "Livraria e Papelaria",
+      "brand": "Traço",
+      "color": "Azul",
+      "price": 169.9,
+      "stock": 5,
+      "tags": [
+        "mochila",
+        "escolar",
+        "escola",
+        "juvenil"
+      ],
+      "description": "Mochila escolar com porta-notebook."
+    },
+    {
+      "id": "paginacerta-12",
+      "store_id": "paginacerta",
+      "name": "Quebra-cabeça 1000 Peças",
+      "category": "Jogos e passatempos",
+      "segment": "Livraria e Papelaria",
+      "brand": "Traço",
+      "color": "Colorido",
+      "price": 69.9,
+      "stock": 3,
+      "tags": [
+        "quebra-cabeça",
+        "puzzle",
+        "passatempo",
+        "jogo"
+      ],
+      "description": "Quebra-cabeça com paisagem do Jalapão."
+    },
+    {
+      "id": "nivelgames-01",
+      "store_id": "nivelgames",
+      "name": "Console NovaStation 5 Slim 1TB",
+      "category": "Consoles",
+      "segment": "Games",
+      "brand": "NovaStation",
+      "color": "Branco",
+      "price": 3799,
+      "stock": 2,
+      "tags": [
+        "console",
+        "videogame",
+        "novastation",
+        "ps",
+        "jogos"
+      ],
+      "description": "Console de nova geração com 1 TB e controle sem fio."
+    },
+    {
+      "id": "nivelgames-02",
+      "store_id": "nivelgames",
+      "name": "Console Portátil Pixel Go",
+      "category": "Consoles",
+      "segment": "Games",
+      "brand": "Pixel Go",
+      "color": "Preto",
+      "price": 2299,
+      "stock": 0,
+      "tags": [
+        "console",
+        "portátil",
+        "videogame",
+        "jogos"
+      ],
+      "description": "Console portátil com tela de 7\"."
+    },
+    {
+      "id": "nivelgames-03",
+      "store_id": "nivelgames",
+      "name": "Controle sem Fio NovaStation",
+      "category": "Controles",
+      "segment": "Games",
+      "brand": "NovaStation",
+      "color": "Preto",
+      "price": 449,
+      "stock": 5,
+      "tags": [
+        "controle",
+        "joystick",
+        "sem fio",
+        "novastation"
+      ],
+      "description": "Controle sem fio com vibração."
+    },
+    {
+      "id": "nivelgames-04",
+      "store_id": "nivelgames",
+      "name": "Headset Gamer 7.1 com Fio",
+      "category": "Fones de ouvido",
+      "segment": "Games",
+      "brand": "Pixel Forge",
+      "color": "Preto",
+      "price": 279.9,
+      "stock": 4,
+      "tags": [
+        "headset",
+        "fone",
+        "gamer",
+        "com fio",
+        "microfone",
+        "7.1",
+        "rgb"
+      ],
+      "description": "Headset gamer com som surround 7.1 virtual, microfone e cabo USB."
+    },
+    {
+      "id": "nivelgames-05",
+      "store_id": "nivelgames",
+      "name": "Jogo Corrida Turbo",
+      "category": "Jogos",
+      "segment": "Games",
+      "brand": "NovaStation",
+      "color": "Colorido",
+      "price": 299.9,
+      "stock": 6,
+      "tags": [
+        "jogo",
+        "game",
+        "corrida",
+        "novastation"
+      ],
+      "description": "Jogo de corrida para NovaStation 5."
+    },
+    {
+      "id": "nivelgames-06",
+      "store_id": "nivelgames",
+      "name": "Jogo Lendas do Cerrado",
+      "category": "Jogos",
+      "segment": "Games",
+      "brand": "Pixel Forge",
+      "color": "Colorido",
+      "price": 249.9,
+      "stock": 4,
+      "tags": [
+        "jogo",
+        "game",
+        "aventura",
+        "rpg"
+      ],
+      "description": "Aventura em mundo aberto inspirada no folclore brasileiro."
+    },
+    {
+      "id": "nivelgames-07",
+      "store_id": "nivelgames",
+      "name": "Mouse Gamer RGB 12000 DPI",
+      "category": "Acessórios gamer",
+      "segment": "Games",
+      "brand": "Pixel Forge",
+      "color": "Preto",
+      "price": 159.9,
+      "stock": 6,
+      "tags": [
+        "mouse",
+        "gamer",
+        "rgb",
+        "computador"
+      ],
+      "description": "Mouse gamer com sensor de 12.000 DPI."
+    },
+    {
+      "id": "nivelgames-08",
+      "store_id": "nivelgames",
+      "name": "Teclado Gamer RGB",
+      "category": "Acessórios gamer",
+      "segment": "Games",
+      "brand": "Pixel Forge",
+      "color": "Preto",
+      "price": 249.9,
+      "stock": 3,
+      "tags": [
+        "teclado",
+        "gamer",
+        "rgb",
+        "mecânico"
+      ],
+      "description": "Teclado semimecânico com iluminação RGB."
+    },
+    {
+      "id": "nivelgames-09",
+      "store_id": "nivelgames",
+      "name": "Mousepad Gamer Grande",
+      "category": "Acessórios gamer",
+      "segment": "Games",
+      "brand": "Pixel Forge",
+      "color": "Preto",
+      "price": 89.9,
+      "stock": 7,
+      "tags": [
+        "mousepad",
+        "gamer",
+        "tapete de mouse"
+      ],
+      "description": "Mousepad 90 × 40 cm com borda costurada."
+    },
+    {
+      "id": "nivelgames-10",
+      "store_id": "nivelgames",
+      "name": "Cadeira Gamer Reclinável",
+      "category": "Cadeiras",
+      "segment": "Games",
+      "brand": "Pixel Forge",
+      "color": "Preto",
+      "price": 1299,
+      "stock": 1,
+      "tags": [
+        "cadeira",
+        "gamer",
+        "reclinável",
+        "escritório"
+      ],
+      "description": "Cadeira reclinável até 180° com almofadas."
+    },
+    {
+      "id": "nivelgames-11",
+      "store_id": "nivelgames",
+      "name": "Suporte para Headset RGB",
+      "category": "Acessórios gamer",
+      "segment": "Games",
+      "brand": "Pixel Forge",
+      "color": "Preto",
+      "price": 69.9,
+      "stock": 5,
+      "tags": [
+        "suporte",
+        "headset",
+        "rgb"
+      ],
+      "description": "Suporte de mesa com iluminação RGB e hub USB."
+    },
+    {
+      "id": "nivelgames-12",
+      "store_id": "nivelgames",
+      "name": "Cartão Presente NovaStore R$ 100",
+      "category": "Cartões presente",
+      "segment": "Games",
+      "brand": "NovaStation",
+      "color": "Azul",
+      "price": 100,
+      "stock": 8,
+      "tags": [
+        "cartão presente",
+        "gift card",
+        "crédito",
+        "presente"
+      ],
+      "description": "Crédito para a loja digital NovaStore."
+    },
+    {
+      "id": "mundoencantado-01",
+      "store_id": "mundoencantado",
+      "name": "Blocos de Montar 500 Peças",
+      "category": "Brinquedos",
+      "segment": "Infantil e Brinquedos",
+      "brand": "Brincar Mais",
+      "color": "Colorido",
+      "price": 199.9,
+      "stock": 5,
+      "tags": [
+        "blocos",
+        "montar",
+        "lego",
+        "brinquedo",
+        "criança"
+      ],
+      "description": "Kit de blocos de montar compatíveis com as principais marcas."
+    },
+    {
+      "id": "mundoencantado-02",
+      "store_id": "mundoencantado",
+      "name": "Boneca Articulada",
+      "category": "Brinquedos",
+      "segment": "Infantil e Brinquedos",
+      "brand": "Brincar Mais",
+      "color": "Rosa",
+      "price": 129.9,
+      "stock": 6,
+      "tags": [
+        "boneca",
+        "brinquedo",
+        "criança"
+      ],
+      "description": "Boneca articulada com acessórios."
+    },
+    {
+      "id": "mundoencantado-03",
+      "store_id": "mundoencantado",
+      "name": "Carrinho de Controle Remoto",
+      "category": "Brinquedos",
+      "segment": "Infantil e Brinquedos",
+      "brand": "Brincar Mais",
+      "color": "Vermelho",
+      "price": 189.9,
+      "stock": 4,
+      "tags": [
+        "carrinho",
+        "controle remoto",
+        "brinquedo",
+        "criança"
+      ],
+      "description": "Carrinho off-road recarregável."
+    },
+    {
+      "id": "mundoencantado-04",
+      "store_id": "mundoencantado",
+      "name": "Dinossauro Robô Interativo",
+      "category": "Brinquedos",
+      "segment": "Infantil e Brinquedos",
+      "brand": "Brincar Mais",
+      "color": "Verde",
+      "price": 249.9,
+      "stock": 0,
+      "tags": [
+        "dinossauro",
+        "robô",
+        "interativo",
+        "brinquedo"
+      ],
+      "description": "Dinossauro que anda, ruge e responde ao toque."
+    },
+    {
+      "id": "mundoencantado-05",
+      "store_id": "mundoencantado",
+      "name": "Urso de Pelúcia 40cm",
+      "category": "Brinquedos",
+      "segment": "Infantil e Brinquedos",
+      "brand": "Algodão Doce",
+      "color": "Marrom",
+      "price": 79.9,
+      "stock": 8,
+      "tags": [
+        "pelúcia",
+        "urso",
+        "ursinho",
+        "presente"
+      ],
+      "description": "Urso de pelúcia antialérgico."
+    },
+    {
+      "id": "mundoencantado-06",
+      "store_id": "mundoencantado",
+      "name": "Jogo de Tabuleiro Família",
+      "category": "Jogos e passatempos",
+      "segment": "Infantil e Brinquedos",
+      "brand": "Brincar Mais",
+      "color": "Colorido",
+      "price": 119.9,
+      "stock": 5,
+      "tags": [
+        "jogo de tabuleiro",
+        "tabuleiro",
+        "família",
+        "jogo"
+      ],
+      "description": "Jogo de tabuleiro para 2 a 6 jogadores."
+    },
+    {
+      "id": "mundoencantado-07",
+      "store_id": "mundoencantado",
+      "name": "Kit Massinha de Modelar",
+      "category": "Brinquedos",
+      "segment": "Infantil e Brinquedos",
+      "brand": "Algodão Doce",
+      "color": "Colorido",
+      "price": 39.9,
+      "stock": 8,
+      "tags": [
+        "massinha",
+        "modelar",
+        "criança",
+        "artes"
+      ],
+      "description": "Kit com 12 potes de massinha e moldes."
+    },
+    {
+      "id": "mundoencantado-08",
+      "store_id": "mundoencantado",
+      "name": "Kit Pintura Infantil",
+      "category": "Brinquedos",
+      "segment": "Infantil e Brinquedos",
+      "brand": "Algodão Doce",
+      "color": "Colorido",
+      "price": 59.9,
+      "stock": 6,
+      "tags": [
+        "pintura",
+        "tinta",
+        "artes",
+        "criança"
+      ],
+      "description": "Kit com tintas guache, pincéis e telas."
+    },
+    {
+      "id": "mundoencantado-09",
+      "store_id": "mundoencantado",
+      "name": "Bicicleta Infantil Aro 16",
+      "category": "Bicicletas",
+      "segment": "Infantil e Brinquedos",
+      "brand": "Brincar Mais",
+      "color": "Azul",
+      "price": 599.9,
+      "stock": 2,
+      "tags": [
+        "bicicleta",
+        "bike",
+        "infantil",
+        "rodinhas",
+        "criança"
+      ],
+      "description": "Bicicleta aro 16 com rodinhas laterais."
+    },
+    {
+      "id": "mundoencantado-10",
+      "store_id": "mundoencantado",
+      "name": "Mochila Infantil com Rodinhas",
+      "category": "Mochilas",
+      "segment": "Infantil e Brinquedos",
+      "brand": "Algodão Doce",
+      "color": "Rosa",
+      "price": 179.9,
+      "stock": 3,
+      "tags": [
+        "mochila",
+        "rodinhas",
+        "escolar",
+        "infantil"
+      ],
+      "description": "Mochila escolar infantil com carrinho."
+    },
+    {
+      "id": "mundoencantado-11",
+      "store_id": "mundoencantado",
+      "name": "Tablet Infantil Educativo",
+      "category": "Tablets",
+      "segment": "Infantil e Brinquedos",
+      "brand": "Brincar Mais",
+      "color": "Azul",
+      "price": 699,
+      "stock": 2,
+      "tags": [
+        "tablet",
+        "infantil",
+        "educativo",
+        "criança"
+      ],
+      "description": "Tablet de 7\" com capa emborrachada e controle parental."
+    },
+    {
+      "id": "mundoencantado-12",
+      "store_id": "mundoencantado",
+      "name": "Kit Body Bebê Algodão 3 Peças",
+      "category": "Roupas infantis",
+      "segment": "Infantil e Brinquedos",
+      "brand": "Algodão Doce",
+      "color": "Branco",
+      "price": 89.9,
+      "stock": 7,
+      "tags": [
+        "body",
+        "bebê",
+        "roupa",
+        "algodão"
+      ],
+      "description": "Kit com 3 bodies de algodão."
+    }
+  ]
+}
