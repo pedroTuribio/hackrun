@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "node scripts/dev.js",
     "test": "node --test tests/unit/*.test.js",
-    "test:e2e": "npx playwright test",
+    "test:e2e": "node --test tests/e2e/fluxo.e2e.mjs",
     "seed": "node scripts/gen-seed.js"
   }
 }

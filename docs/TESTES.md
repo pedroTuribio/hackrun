@@ -50,6 +50,58 @@ Os testes de API sobem o servidor local de verdade (`scripts/dev.js`) numa porta
 
 Por arquivo: text 15 · search 13 · ai 12 · ai-modelo 2 · compare 9 · route 5 · reservas 14 · api 32 · privacidade 4 · db-supabase 8.
 
+## Teste ponta a ponta
+
+`tests/e2e/fluxo.e2e.mjs` roda o fluxo da demo num navegador de verdade (Chromium, via Playwright), com tela
+de celular (390 px). O teste sobe sozinho o servidor local (`scripts/dev.js`) numa porta livre, com
+`DATA_MODE=memory`, `PONTE_QUIET=1` e sem chave do Gemini (modo regras), e derruba o servidor no final, mesmo se
+algo falhar. Usa o mesmo `node:test` + `node:assert/strict` dos testes de unidade.
+
+```bash
+npm run test:e2e
+node --test --test-reporter=spec tests/e2e/fluxo.e2e.mjs   # saída em lista (fora de um terminal o padrão é TAP)
+```
+
+Requer o Playwright com o Chromium. Numa máquina nova: `npm i -D playwright && npx playwright install chromium`
+(o projeto não tem dependências; o teste tenta `import('playwright')` e, se não achar, usa
+`/opt/node-tools/node_modules/playwright`). Capturas de tela de cada etapa ficam em `test-results/e2e/`
+(fora do git).
+
+| # | Passo | O que é verificado |
+|---|---|---|
+| 1 | Cliente busca "fone com cancelamento de ruído por R$ 599" | Comparativo online × shopping com veredito; ≥ 1 resultado; todo resultado com selo "Igual"/"Parecido" e motivo. |
+| 2 | Abre o produto e pede "Separa pra mim" com apelido | Nome do produto = catálogo; POST da reserva OK com `x-trace-id`; código `PT-####`; QR Code em SVG; status "Aguardando". |
+| 3 | Lojista (`/loja`) entra com o código da loja do produto | A reserva daquele código aparece pendente, com o apelido; **Confirmar** aceito pela API. |
+| 4 | Cliente continua na tela da reserva | O status muda sozinho para "Confirmada" (atualização a cada 5 s). |
+| 5 | Lojista faz check-in digitando o código | Mensagem de retirada com o código; API devolve `retirada`; cliente vê "Retirada". |
+| 6 | Painel (`/painel`, SHOP2026) | 6 indicadores; Retiradas ≥ 1 e maior que antes do teste; aba Logs lista eventos; busca pelo `traceId` da reserva mostra só eventos dele ("Reserva criada"). |
+| 7 | Busca "patinete elétrico" | Tela "Ainda não temos isso por aqui", sem resultados. |
+| 8 | Todas as páginas | Nenhum erro de JavaScript (`pageerror`) no cliente, na loja e no painel. |
+
+Resultado: 8 de 8 passando, 3 execuções seguidas sem instabilidade (≈ 9 s cada; ~5 s são a espera da
+atualização automática da reserva). Nenhum bug do app apareceu neste teste. Saída:
+
+```
+▶ Fluxo da demo no navegador (cliente → lojista → painel)
+  ✔ 1. cliente busca "fone com cancelamento de ruído por R$ 599" e vê comparativo e resultados com selo e motivo (558.726648ms)
+  ✔ 2. abre o produto, reserva "Separa pra mim" com apelido e vê código PT-####, QR e "Aguardando" (922.723477ms)
+  ✔ 3. lojista entra com o código da loja e confirma a reserva pendente (397.547801ms)
+  ✔ 4. cliente vê o status mudar para confirmada (polling) (4946.941334ms)
+  ✔ 5. lojista faz check-in digitando o código e a reserva fica retirada (386.390356ms)
+  ✔ 6. painel com SHOP2026 mostra KPIs, retiradas ≥ 1 e logs filtráveis pelo traceId (734.500758ms)
+  ✔ 7. busca sem resultado ("patinete elétrico") mostra o estado de não encontrado (189.71849ms)
+  ✔ 8. nenhum erro de JavaScript (pageerror) em todas as páginas (1.364794ms)
+✔ Fluxo da demo no navegador (cliente → lojista → painel) (8881.57769ms)
+ℹ tests 8
+ℹ suites 1
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8957.276606
+```
+
 ## Bugs encontrados e corrigidos
 
 | # | Descrição | Como foi encontrado (teste) | Correção | Commit |
