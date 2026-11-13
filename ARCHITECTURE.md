@@ -51,6 +51,7 @@ tests/e2e            testes Playwright
 | `GEMINI_MODEL` | modelo Gemini | `gemini-flash-latest` |
 | `ADMIN_CODE` | código de acesso do painel do shopping | `SHOP2026` |
 | `DATA_MODE` | força `memory` | automático |
+| `PONTE_NO_SEED` | `1` desliga o histórico fictício do modo memória | vazio |
 
 ## Modelos de dados
 
@@ -125,11 +126,86 @@ O header `x-trace-id` também volta em toda resposta.
     onlinePrice, shippingEstimate, deliveryDays,
     shoppingPrice, difference,       // shoppingPrice - (onlinePrice + shippingEstimate)
     verdict: 'shopping_mais_barato' | 'online_mais_barato' | 'empate',
-    advantages: string[]             // vantagens de ir à loja, sempre honestas
+    advantages: string[],            // vantagens de ir à loja, sempre honestas
+    basis: 'igual' | 'parecido',     // shoppingPrice é do mesmo produto (menor "igual") ou dos parecidos mais próximos
+    summary: string,                 // frase pronta para a tela (ex.: "Online sai R$ 9,10 mais barato contando o frete, ...")
+    alternative: null | { productId, name, price, storeName }  // parecido mais barato que o "igual", se houver
   },
   notFound: boolean                  // true quando results está vazio
 }
 ```
+
+Erros de `/api/search`: 400 sem `query` nem `image`, formato de imagem fora de JPG/PNG/WEBP ou base64 inválido
+(aceita também data URL); 413 imagem > 3 MB; 400 "Escreva o nome do produto..." quando só há foto e a IA não está
+disponível ou falhou (não há como ler a foto por regras).
+
+Frete estimado do online (`lib/compare.js`): R$ 19,90 abaixo de R$ 199,00; grátis a partir de R$ 199,00; entrega em 5 dias.
+`verdict` usa faixa de empate de ±R$ 5,00.
+
+### Resposta de `/api/dashboard`
+
+```js
+{
+  totals: { searches, searchesWithoutResult, reservations, confirmed, refused, pickedUp, aiErrors, apiErrors },
+  rates: {                           // números de 0 a 1 (ex.: 0.233)
+    searchToReservation,             // reservas criadas / buscas
+    reservationToPickup,             // retiradas / reservas criadas
+    confirmation,                    // confirmadas / (confirmadas + recusadas)
+    searchWithoutResult              // buscas sem resultado / buscas
+  },
+  unmetDemand: [ { term, category, count } ],   // top 10 de busca_sem_resultado por termo
+  topSearches: [ { term, category, count } ],   // top 10 de busca_realizada por termo
+  byStore: [ { store: { id, name, segment, floor, unit }, reservations, confirmed, refused, pickedUp } ],
+  period: { from, to, events },
+  updatedAt
+}
+```
+Tudo é calculado a partir dos eventos (últimos 5000).
+
+### Status e erros das rotas de reserva e loja
+
+- `POST /api/reservations`: 400 dados inválidos (`type` fora de separar/testar, apelido fora de 1–30 caracteres após `trim`);
+  404 produto inexistente; 409 produto sem estoque. Código `PT-1234` único.
+  Validade (`expires_at`): 22h de hoje no horário de Palmas (UTC−3); se faltarem menos de 2 h para as 22h, vale 4 h a partir de agora.
+  O estoque não é baixado na reserva (a loja confirma ou recusa).
+- `GET /api/reservations?code=`: 404 se não existir (código sem diferenciar maiúsculas).
+- `store-login`, `store-reservations`, `store-checkin`: 401 código de loja ausente/errado. `store`, quando devolvida, nunca traz `code`.
+- `POST /api/store-reservations`: 404 se a reserva não for da loja; 409 se não estiver `aguardando`.
+- `POST /api/store-checkin`: 404 se a reserva não for da loja; 409 se não estiver `confirmada`.
+- `dashboard` e `logs`: 401 sem `x-admin-code` correto. `logs`: 400 para `type` desconhecido; `limit` 1–500 (padrão 100).
+- `POST /api/route`: 400 lista vazia/inválida (máx. 20); ids desconhecidos são ignorados; 404 se nenhum existir.
+  `summary` ex.: "3 lojas em 2 pisos", "1 loja no piso 1". `Stop.store` inclui `hours`.
+
+### Dados dos eventos (`Event.data`)
+
+| Tipo | data |
+|---|---|
+| `busca_realizada` | `{ query, term, hasImage, category, results, source }` — `query` = texto normalizado (máx. 80), `term` = nome interpretado normalizado |
+| `busca_sem_resultado` | `{ term, category }` |
+| `reserva_criada` / `reserva_confirmada` / `reserva_recusada` / `retirada_confirmada` | `{ store_id, product_id, type }` (sem apelido) |
+| `erro_ia` | `{ stage: 'interpret' \| 'rank', message }` |
+| `erro_api` | `{ route, message }` |
+
+No modo memória, um histórico fictício (~50 eventos e 6 reservas) é criado ao iniciar para o painel não abrir vazio;
+esses eventos têm `data.seed = true`. `PONTE_NO_SEED=1` desliga (útil em testes).
+
+### Códigos de demonstração (modo memória e seed)
+
+| Loja | Piso/unidade | Código |
+|---|---|---|
+| SomMax (Eletrônicos) | 1 / 112 | `SOM112` |
+| Vitrine Moda | 1 / 118 | `VIT118` |
+| Passo Firme (Calçados) | 1 / 125 | `PAS125` |
+| TecnoPonto (Eletrônicos e Informática) | 2 / 204 | `TEC204` |
+| Essência Viva (Beleza e Perfumaria) | 2 / 210 | `ESS210` |
+| Arena Esportes | 2 / 221 | `ARE221` |
+| Nível Games | 2 / 232 | `NIV232` |
+| Lar & Cia (Casa) | 3 / 305 | `LAR305` |
+| Página Certa (Livraria e Papelaria) | 3 / 312 | `PAG312` |
+| Mundo Encantado (Infantil e Brinquedos) | 3 / 318 | `MUN318` |
+
+Painel do shopping: `SHOP2026` (ou `ADMIN_CODE`). Reservas do histórico fictício: `PT-1042` (retirada), `PT-2318` (confirmada,
+TecnoPonto), `PT-3675` (retirada), `PT-4821` (recusada), `PT-5190` e `PT-6034` (aguardando).
 
 Regras da IA (uso crítico):
 1. A IA nunca inventa produto, estoque ou preço: resultados vêm só do catálogo.
