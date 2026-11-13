@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ponte Lojista — reservas da loja</title>
+  <meta name="theme-color" content="#073b38">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Cg fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 22h22M6 18.5c3-7 17-7 20 0M10.5 22v-7M16 22v-9.5M21.5 22v-7'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="ops">
+  <div id="root"></div>
+
+  <dialog id="camera-sheet" class="sheet" aria-labelledby="camera-title">
+    <div class="sheet-body">
+      <div class="sheet-grip" aria-hidden="true"></div>
+      <h2 id="camera-title">Ler QR do cliente</h2>
+      <div class="camera-box"><video id="camera-video" playsinline muted></video><div class="camera-frame" aria-hidden="true"></div></div>
+      <p class="muted small" id="camera-hint">Aponte para o QR na tela do cliente.</p>
+      <button type="button" class="btn btn-outline btn-block" id="camera-close">Fechar câmera</button>
+    </div>
+  </dialog>
+
+  <script type="module" src="/js/loja.js"></script>
+</body>
+</html>
