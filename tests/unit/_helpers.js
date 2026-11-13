@@ -34,7 +34,7 @@ export async function startServer() {
 
 /** Requisição JSON simples. body string = enviado como está (para testar JSON inválido). */
 export async function call(base, method, path, { body, headers = {} } = {}) {
-  const init = { method, headers: { ...headers } };
+  const init = { method, headers: { ...headers }, signal: AbortSignal.timeout(10_000) }; // trava vira falha, não espera infinita
   if (body !== undefined) {
     init.body = typeof body === 'string' ? body : JSON.stringify(body);
     init.headers['content-type'] = 'application/json';

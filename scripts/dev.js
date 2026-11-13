@@ -17,7 +17,14 @@ const TYPES = {
 };
 
 async function serveStatic(req, res, pathname) {
-  let file = path.join(publicDir, decodeURIComponent(pathname));
+  let decoded;
+  try {
+    decoded = decodeURIComponent(pathname);
+  } catch {
+    res.statusCode = 400; // URL malformada (ex.: "/%E0") não pode derrubar o servidor
+    return res.end('Endereço inválido');
+  }
+  let file = path.join(publicDir, decoded);
   if (!file.startsWith(publicDir)) { res.statusCode = 403; return res.end(); }
   try {
     const s = await stat(file);

@@ -282,6 +282,18 @@ describe('API — caminhos de erro', () => {
     assert.equal((await api('GET', '/api/product?id=nao-existe')).status, 404);
   });
 
+  test('servidor local: URL malformada responde 400 e o servidor continua de pé', async () => {
+    const r = await call(srv.base, 'GET', '/%E0%A4%A');
+    assert.equal(r.status, 400);
+    assert.equal((await api('GET', '/api/health')).status, 200);
+  });
+
+  test('servidor local: rota de API inexistente responde 404 em JSON', async () => {
+    const r = await call(srv.base, 'GET', '/api/nao-existe');
+    assert.equal(r.status, 404);
+    assert.ok(r.json.error.message);
+  });
+
   test('cada requisição recebe um traceId diferente', async () => {
     const ids = new Set();
     for (let i = 0; i < 5; i++) ids.add((await api('GET', '/api/health')).json.traceId);
