@@ -151,6 +151,31 @@ describe('search.js — interpretação por regras', () => {
     assert.equal(guessCategory(tokenize('qualquer coisa')), null);
   });
 
+  test('nome interpretado não carrega expressões de preço (vai para a tela e para o painel)', () => {
+    const cases = {
+      'tênis abaixo de 300': 'tênis',
+      'mochila menos de 150': 'mochila',
+      'notebook até 4 mil': 'notebook',
+      'headphone Q45 por 520 reais': 'headphone Q45',
+      'fone de 300 reais': 'fone',
+      'Fone JBL até R$ 500,00': 'Fone JBL',
+      'fone R$489,90': 'fone',
+      'perfume até 200 reais': 'perfume',
+      'tênis no máximo 300': 'tênis',
+      'notebook R$ 1.299,00': 'notebook',
+      'fone com cancelamento de ruído': 'fone com cancelamento de ruído',
+      'Fone Pulse 700': 'Fone Pulse 700',
+    };
+    for (const [q, name] of Object.entries(cases)) assert.equal(interpretByRules(q).name, name, q);
+  });
+
+  test('termo do evento não carrega o preço', async () => {
+    const t = trace();
+    await search({ query: 'tênis abaixo de 300', traceId: t });
+    const ev = (await eventsOf(t)).find((e) => e.type === 'busca_realizada');
+    assert.equal(ev.data.term, 'tenis');
+  });
+
   test('marca, cor e preço extraídos do texto', () => {
     const products = catalog.products;
     const r = interpretByRules('fone Sonora preta até 500', products, []);
