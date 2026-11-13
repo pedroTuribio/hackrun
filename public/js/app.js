@@ -717,6 +717,7 @@ function viewReservation(code) {
         if (navigator.vibrate) navigator.vibrate([60, 40, 60]);
       }
       if (lastStatus === 'aguardando' && r.status === 'recusada') toast('A loja não conseguiu separar desta vez.', { type: 'error' });
+      if (lastStatus === 'confirmada' && r.status === 'retirada') toast('Retirada confirmada. Boas compras!', { type: 'success' });
       const changed = r.status !== lastStatus || first;
       lastStatus = r.status;
       if (changed) renderReservation(r);
@@ -743,7 +744,9 @@ function viewReservation(code) {
   };
   const schedule = (status) => {
     clearTimeout(timer);
-    if (status === 'aguardando' && token === viewToken) timer = setTimeout(() => load(false), 5000);
+    // Continua acompanhando até a retirada: aguardando (5 s) e confirmada (10 s)
+    const wait = status === 'aguardando' ? 5000 : status === 'confirmada' ? 10000 : 0;
+    if (wait && token === viewToken) timer = setTimeout(() => load(false), wait);
   };
   cleanup.push(() => clearTimeout(timer));
   load(true);
