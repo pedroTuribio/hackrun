@@ -14,6 +14,13 @@ Utilize os links e credenciais abaixo para testar os diferentes perfis da plataf
 | **Administração do Shopping** | [Acessar Painel do Shopping](https://ponte-orcin.vercel.app/painel) | `SHOP2026` |
 
 
+## 📊 Apresentação (Pitch)
+
+* **Pitch Deck — Ponte:** [Visualizar Slides no Canva](https://canva.link/3lgf53zyltnjrox)
+
+  
+
+
 
 
 # Ponte — viu online, resolve hoje no shopping
