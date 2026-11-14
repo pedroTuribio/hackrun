@@ -17,6 +17,30 @@
 <body class="client">
   <a class="skip-link" href="#app">Pular para o conteúdo</a>
 
+  <aside class="desk-side desk-left" aria-label="Sobre a Ponte">
+    <div class="desk-brand">
+      <span class="desk-logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17h18M4 14.5c2.2-5.2 13.8-5.2 16 0M7.5 17v-5M12 17v-7M16.5 17v-5"/></svg></span>
+      <span>Ponte</span>
+    </div>
+    <h2 class="desk-title">Viu online? <em>Resolve hoje</em> no shopping.</h2>
+    <ol class="desk-steps">
+      <li><b>Ache</b><span>Mande foto, print ou texto. A IA mostra qual loja tem — com o motivo e a confiança.</span></li>
+      <li><b>Compare</b><span>Online × shopping, com honestidade: se a internet for mais barata, a gente diz.</span></li>
+      <li><b>Separe</b><span>Um toque e a loja separa ou prepara para você testar. Retire com o QR.</span></li>
+    </ol>
+    <p class="desk-note">Lojas e produtos fictícios · HackaRun 2026 · time Rackron</p>
+  </aside>
+
+  <aside class="desk-side desk-right" aria-label="Abrir no celular">
+    <div class="desk-qr-card">
+      <p class="desk-kicker">Feito para o celular</p>
+      <h2>Abra no seu celular</h2>
+      <div class="desk-qr" id="desk-qr"></div>
+      <p class="desk-hint">Aponte a câmera para o QR</p>
+      <p class="desk-url" id="desk-url">ponte-orcin.vercel.app</p>
+    </div>
+  </aside>
+
   <main id="app" class="app" tabindex="-1" aria-live="polite">
     <noscript>
       <div class="page"><div class="card">Ative o JavaScript para usar a Ponte.</div></div>
@@ -72,5 +96,6 @@
   </dialog>
 
   <script type="module" src="/js/app.js"></script>
+  <script type="module" src="/js/desk.js"></script>
 </body>
 </html>

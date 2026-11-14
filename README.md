@@ -57,7 +57,7 @@ Passo a passo em [`docs/DEPLOY.md`](docs/DEPLOY.md). As chaves ficam só nas var
 ## Testes
 
 ```bash
-npm test          # 114 testes unitários e de API (node:test), sem rede
+npm test          # 123 testes unitários e de API (node:test), sem rede
 npm run test:e2e  # teste ponta a ponta no navegador (Playwright + Chromium)
 ```
 

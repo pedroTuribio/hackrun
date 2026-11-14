@@ -29,26 +29,27 @@ Os testes de API sobem o servidor local de verdade (`scripts/dev.js`) numa porta
 | `tests/unit/api.test.js` | **Fluxo completo via HTTP:** health → stores → busca → produto → reserva (POST) → consulta por código → login da loja → lista da loja → check-in antes da confirmação (409) → outra loja (404) → confirmar (e 409 ao repetir) → check-in (e 409 ao repetir) → painel conta busca/reserva/confirmação/retirada → logs filtrados por traceId e por tipo → roteiro. **Erros:** 405, 400 JSON inválido (4 rotas), 400 busca vazia/não-texto/imagem GIF/base64 inválido, 400 só foto sem IA (data URL), 413 imagem > 3 MB, 400/404/409 na reserva (tipo, apelido 0 e 31 caracteres, produto inexistente, sem estoque), 401 loja e admin errados, recusa + check-in de recusada (409), logs com tipo/rastreio inválidos e limite, roteiro inválido, produto 400/404, URL malformada no servidor local. **Em toda resposta:** `traceId` no corpo = header `x-trace-id`; erros só com `{ error: { message, traceId } }`. |
 | `tests/unit/privacidade.test.js` | Apelido nunca aparece nos eventos nem nos logs técnicos (reserva → confirmação → retirada, e no erro de validação); imagem nunca aparece nos eventos/logs; logs técnicos são JSON com traceId, rota, método, status e ms; falha no banco → 500 com mensagem genérica, `traceId` e evento `erro_api` `{ route, message }` (visível em `/api/logs` e no painel); falha ao gravar evento não derruba a requisição. |
 | `tests/unit/db-supabase.test.js` | Camada Supabase com fetch simulado: headers `apikey`/`Authorization`, `listStores` sem `code`, preço/estoque em texto → número, cache do catálogo, maiúsculas e escape na URL, 409 → `duplicate`, erro sem vazar a chave, `return=minimal`, limite 5000, PATCH sem linha. Modos em `config.js`. |
+| `tests/unit/desk.test.js` | Laterais no PC: QR aponta para a página inicial do mesmo site (com endereço publicado como reserva), endereço curto, QR válido, montagem na página, `index.html` carrega `desk.js` e o CSS esconde as laterais fora do computador. |
 
 ## Resultado final
 
-114 testes, 114 passando, 0 falhas (rodado 3 vezes seguidas, sem instabilidade). Saída de `npm test`:
+123 testes, 123 passando, 0 falhas (atualizado em 14/11 após a melhoria das laterais no PC). Saída de `npm test`:
 
 ```
 > ponte@1.0.0 test
 > node --test tests/unit/*.test.js
 
-# tests 114
-# suites 20
-# pass 114
+# tests 123
+# suites 21
+# pass 123
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 1245.437214
+# duration_ms 1117.257202
 ```
 
-Por arquivo: text 15 · search 13 · ai 12 · ai-modelo 2 · compare 9 · route 5 · reservas 14 · api 32 · privacidade 4 · db-supabase 8.
+Por arquivo: text 15 · search 13 · ai 12 · ai-modelo 4 · compare 9 · route 5 · reservas 14 · api 32 · privacidade 4 · db-supabase 9 · desk 6.
 
 ## Teste ponta a ponta
 
@@ -171,6 +172,14 @@ Tarefa dada: *"você viu um fone na internet; use o app"*, no site publicado, se
 **Resultado:** 5 de 5 concluíram sozinhas, tempo médio de cerca de 4 min, nenhum ponto de travamento relatado.
 
 **Limitações (registradas com honestidade):** não foi anotada nota de 1 a 5; os tempos são aproximados; o grupo tem 17–21 anos, mais jovem que o público-alvo completo (18–45); não foi registrado se cada pessoa usou texto ou foto, nem quais segmentos buscaram. Como ninguém travou, este teste não gerou correções.
+
+## Melhoria pós-testes: laterais no computador com QR "abra no celular" (14/11)
+
+**Por quê:** no PC o app aparecia só como uma coluna no meio da tela, com as laterais vazias (visto pelo time no teste em produção). Na demo, a banca precisa abrir o app no próprio celular.
+
+**O que mudou:** em telas a partir de 1180 px, a lateral esquerda mostra o que a Ponte faz (Ache, Compare, Separe) e a direita um QR Code que abre a página inicial do mesmo site (`public/js/desk.js`, usando o gerador de QR do próprio projeto). No celular e em telas menores nada muda (CSS esconde as laterais).
+
+**Testes:** `tests/unit/desk.test.js` (6 testes: endereço do QR, endereço curto, QR válido, montagem na página, HTML/CSS). Suíte completa: **123 testes passando**. Conferido no navegador em 1440, 1920, 1100 e 390 px; o QR do print foi lido por um leitor de QR (OpenCV) e abre o endereço certo. Print: `docs/screens/26-pc-laterais-qr.png`.
 
 ## Testes manuais (checklist da demo)
 
