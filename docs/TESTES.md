@@ -121,6 +121,41 @@ atualização automática da reserva). Nenhum bug do app apareceu neste teste. S
 - **Supabase:** o painel pede os últimos 5000 eventos, mas o PostgREST do Supabase limita por padrão a 1000 linhas por consulta (`Max rows`). Para a demo é suficiente; para mais volume, aumentar o limite no projeto ou paginar.
 - **Validade:** o check-in não bloqueia reservas vencidas (`expires_at` é informativo; o contrato não exige bloqueio).
 
+## Testes manuais em produção (13–14/11/2026)
+
+Feitos pelo time em https://ponte-orcin.vercel.app (Supabase + Gemini ligados), em celular e PC. Cada passo foi conferido na tabela `events` do Supabase pelo código de rastreio. Prints em [`docs/screens/producao/`](screens/producao/).
+
+| Teste | O que foi feito | Resultado | Rastreio (`events`) |
+|---|---|---|---|
+| Busca por texto com IA | Texto livre ("fone de ouvido") | "Identificado pela IA", 6 resultados | `9Y6GE4`, `GRYULQ` |
+| Busca por foto com IA | Foto de um mouse | Categoria "Acessórios de informática" | — |
+| **1. Print com preço** | Print de loja online com preço | IA leu R$ 159,60; comparativo honesto mostrou o online mais barato | — |
+| **2. Reserva completa** | Foto do fone → "Separa pra mim" (**PT-6814**, apelido "Ol") → loja TecnoPonto (`TEC204`) confirma → tela do cliente muda sozinha para "Confirmada pela loja" → check-in pelo código → "Retirada confirmada · Venda concluída" | ✅ Status `retirada` no banco; aparece no Histórico da loja | busca `JH2YEV` → criada `XUB9WZ` → confirmada `XM3HK6` → retirada `FM5C3F` |
+| **3. Busca sem resultado + painel** | "patinete elétrico" → "Ainda não temos isso por aqui" (IA, confiança alta) → `/painel` | ✅ Aparece em *Demanda não atendida* ("1 busca saiu do shopping sem resposta"); aba *Logs* filtrada pelo código mostra os 2 eventos | `9BT4P5` (`busca_realizada` com 0 resultados + `busca_sem_resultado`, categoria "Patinetes") |
+
+Painel após os testes: 15 buscas, 3 reservas (2 confirmadas, 0 recusadas), 1 retirada, conversão busca → reserva 20%, reserva → retirada 33%.
+
+Achados durante os testes (não são bugs do app):
+- O painel recusou `SHOP2026` porque a variável `ADMIN_CODE` na Vercel tinha outro valor. Trocada para `SHOP2026` (igual a este documento e ao README) e feito redeploy.
+- No PC o app aparece numa coluna centralizada: é proposital (feito para celular, que é como o cliente usa dentro do shopping).
+- O painel mostra "9 com erro": são os `erro_ia` antigos que levaram às correções 6, 7 e 8.
+
+| Print | Tela |
+|---|---|
+| `t2-1-cliente-confirmada.jpg` | Cliente: "Separado pra você!", confirmada pela loja, QR PT-6814 |
+| `t2-2-cliente-detalhes.jpg` | Cliente: produto, loja/piso, prazo de retirada, apelido |
+| `t2-3-loja-pendentes.png` | Loja: reservas pendentes antes de confirmar |
+| `t2-4-loja-retirada-confirmada.png` | Loja: check-in "Retirada confirmada · PT-6814" |
+| `t2-5-loja-confirmadas.png` | Loja: aba Confirmadas |
+| `t2-6-loja-historico.png` | Loja: Histórico com a PT-6814 "Retirada" |
+| `t3-1-cliente-nao-encontrado.jpg` | Cliente: "patinete elétrico" não encontrado |
+| `t3-2-painel-demanda-nao-atendida.png` | Painel: KPIs e demanda não atendida com o patinete |
+| `t3-3-painel-logs-9BT4P5.png` | Painel: Logs filtrados pelo código 9BT4P5 |
+| `t3-4-painel-logs-todos.png` | Painel: todos os logs (reserva → confirmação → retirada) |
+| `t3-5-painel-mais-buscados.png` | Painel: mais buscados |
+| `t3-6-painel-reservas-por-loja.png` | Painel: reservas por loja |
+| `pc-inicio.jpg` | Tela inicial no PC |
+
 ## Testes manuais (checklist da demo)
 
 Rodar `npm run dev` (sem chaves = memória + regras) ou abrir a URL publicada.
