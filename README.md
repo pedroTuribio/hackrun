@@ -128,5 +128,6 @@ Regras de uso crítico, garantidas no código e cobertas por testes:
 
 - No modo memória, cada instância guarda os próprios dados: na Vercel, use o Supabase para reservas persistentes.
 - A reserva não baixa o estoque, e o check-in ainda aceita reservas fora do horário de validade.
+- **Estoque em tempo real:** no protótipo, o estoque vem de um catálogo cadastrado. Em produção, a Ponte precisaria se integrar ao sistema de estoque/PDV de cada loja (por API ou por atualização periódica). Até lá, a confirmação do lojista em cada reserva garante que o produto existe de fato antes de o cliente ir à loja.
 - O leitor de QR por câmera depende do navegador (Chrome no Android); nos outros, o lojista digita o código.
 - O pagamento não faz parte do MVP: o foco é levar o cliente até a loja física.
