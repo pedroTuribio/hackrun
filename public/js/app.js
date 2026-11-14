@@ -432,9 +432,10 @@ function compareCard(c) {
       <div class="compare-col ${shopWins ? 'win' : ''}">
         <div class="k">Shopping</div>
         <div class="v">${brl(c.shoppingPrice)}</div>
-        <div class="d">hoje · testa antes</div>
+        <div class="d">${c.basis === 'parecido' ? 'produto parecido · hoje' : 'mesmo produto · hoje'}</div>
       </div>
     </div>
+    ${c.basis === 'parecido' ? `<p class="compare-note">${icon('alert')}<span>Atenção: o shopping não tem o mesmo modelo. O preço acima é de um produto <strong>parecido</strong> (outra marca ou versão), então a comparação é aproximada.</span></p>` : ''}
     <p class="compare-verdict">${esc(verdict)}</p>
     <ul class="compare-adv">${adv.slice(0, 4).map((a) => `<li>${icon('check')}<span>${esc(a)}</span></li>`).join('')}</ul>
   </section>`;

@@ -2763,3 +2763,10 @@ table.logs code {
 .checkin {
   grid-template-columns: minmax(0, 1fr);
 }
+
+.compare-note {
+  display: flex; gap: 8px; align-items: flex-start;
+  margin: 12px 0 0; padding: 10px 12px; border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12); font-size: 0.86rem; line-height: 1.35;
+}
+.compare-note .icon { flex: none; width: 18px; height: 18px; margin-top: 1px; }
