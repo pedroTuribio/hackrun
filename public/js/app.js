@@ -447,7 +447,7 @@ function resultCard(r, source) {
   const igual = r.match === 'igual';
   const marker = source === 'ia' ? '<span class="reason-tag ia">IA</span>' : '<span class="reason-tag">regra</span>';
   return `<article class="result" data-href="#/produto/${encodeURIComponent(p.id)}">
-    ${segMedia(p.segment || st.segment, 'result-media')}
+    ${segMedia(p.segment || st.segment, 'result-media', '', `${p.name} ${p.category}`)}
     <div class="result-body">
       <div class="result-top">
         <span class="tag ${igual ? 'tag-igual' : 'tag-parecido'}">${igual ? icon('check', 'icon-sm') + 'Igual' : 'Parecido'}</span>
@@ -548,7 +548,7 @@ function renderProduct(p, similar) {
   const sim = Array.isArray(similar) ? similar.filter((s) => s && s.id && String(s.id) !== String(p.id)) : null;
   render(`${topbar(st.name || 'Produto')}
     <div class="page">
-      ${segMedia(p.segment || st.segment, 'product-media', `<span class="seg-label">${esc(p.category || seg.label)}</span>`)}
+      ${segMedia(p.segment || st.segment, 'product-media', `<span class="seg-label">${esc(p.category || seg.label)}</span>`, `${p.name} ${p.category}`)}
       <div style="display:grid;gap:8px">
         <h2 class="product-title">${esc(p.name)}</h2>
         <div class="where">${icon('store', 'icon-sm')}<span>${esc(st.name || 'Loja')}</span>
@@ -585,7 +585,7 @@ function renderProduct(p, similar) {
                 .slice(0, 10)
                 .map(
                   (s) => `<a class="mini" href="#/produto/${encodeURIComponent(s.id)}">
-                  ${segMedia(s.segment || (s.store || {}).segment, 'mini-media')}
+                  ${segMedia(s.segment || (s.store || {}).segment, 'mini-media', '', `${s.name} ${s.category}`)}
                   <div class="mini-body"><span class="mini-name">${esc(s.name)}</span><span class="mini-price">${brl(s.price)}</span><span class="mini-store">${esc((s.store || {}).name || '')}${(s.store || {}).floor != null ? ' · ' + esc(floorLabel(s.store.floor)) : ''}</span></div>
                 </a>`,
                 )

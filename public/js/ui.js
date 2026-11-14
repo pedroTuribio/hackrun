@@ -46,6 +46,17 @@ const P = {
   gift: '<rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8S10.5 3 8 4s0 4 4 4zM12 8s1.5-5 4-4 0 4-4 4z"/>',
   baby: '<circle cx="12" cy="13" r="7"/><path d="M9.5 12h.01M14.5 12h.01M10 15.5a3 3 0 0 0 4 0M12 6a2 2 0 0 1 2-2"/>',
   eye: '<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  mouse: '<rect x="6" y="3" width="12" height="18" rx="6"/><path d="M12 3v6M12 7.5v1"/>',
+  laptop: '<rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/>',
+  watch: '<rect x="7" y="7" width="10" height="10" rx="2.5"/><path d="M9 7l.6-4h4.8l.6 4M9 17l.6 4h4.8l.6-4M12 10v2.5l1.5 1"/>',
+  phone: '<rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/>',
+  speaker: '<rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="14" r="3.2"/><path d="M12 7h.01"/>',
+  keyboard: '<rect x="2.5" y="6.5" width="19" height="11" rx="2"/><path d="M6 10h.01M9 10h.01M12 10h.01M15 10h.01M18 10h.01M7 14h10"/>',
+  monitor: '<rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M9 20h6M12 16v4"/>',
+  backpack: '<path d="M6 9a6 6 0 0 1 12 0v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M9 4.5V3h6v1.5M9 14h6v3H9z"/>',
+  bolt: '<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',
+  bike: '<circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l4-7h5l3 7M10 9l2 7h-6M14 6h2"/>',
+  pan: '<path d="M3 11h13v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5z"/><path d="M16 12h5"/>',
 };
 
 export function icon(name, cls = '') {
@@ -98,9 +109,29 @@ export function segGradient(segment) {
   return `background:linear-gradient(145deg, ${s.c[0]} 0%, ${s.c[1]} 100%)`;
 }
 
-export function segMedia(segment, cls, extra = '') {
+// Ícone pelo próprio produto (nome + categoria); se não reconhecer, usa o do segmento da loja.
+const PRODUCT_ICONS = [
+  [/mouse(?!pad)/, 'mouse'], [/notebook|laptop/, 'laptop'], [/smartwatch|relogio|smart band|pulseira/, 'watch'],
+  [/celular|smartphone|tablet|leitor digital/, 'phone'], [/caixa de som|soundbar|speaker/, 'speaker'],
+  [/teclado/, 'keyboard'], [/monitor|webcam/, 'monitor'], [/mochila/, 'backpack'],
+  [/carregador|power bank|cabo|ssd|roteador/, 'bolt'], [/bicicleta|bike/, 'bike'],
+  [/fone|headphone|headset|earbud/, 'headphones'], [/tenis|sapat|bota|sandalia|chinelo/, 'shoe'],
+  [/perfume|base |batom|sombra|protetor|hidratante|shampoo/, 'bottle'], [/oculos/, 'eye'],
+  [/console|controle|jogo|game/, 'gamepad'], [/livro|caderno|agenda|planner|caneta|calculadora/, 'book'],
+  [/panela|air fryer|cafeteira|liquidificador|garrafa/, 'pan'], [/camiseta|camisa|calca|vestido|jaqueta|moletom|bermuda|legging|body/, 'shirt'],
+  [/bola|halter|corda|yoga/, 'ball'], [/boneca|blocos|pelucia|carrinho|brinquedo|massinha|dinossauro/, 'gift'],
+];
+
+export function productIcon(hint) {
+  const n = norm(hint);
+  if (!n) return null;
+  const hit = PRODUCT_ICONS.find(([re]) => re.test(n));
+  return hit ? hit[1] : null;
+}
+
+export function segMedia(segment, cls, extra = '', hint = '') {
   const s = segmentInfo(segment);
-  return `<div class="${cls}" style="${segGradient(segment)}" aria-hidden="true">${extra}${icon(s.icon)}</div>`;
+  return `<div class="${cls}" style="${segGradient(segment)}" aria-hidden="true">${extra}${icon(productIcon(hint) || s.icon)}</div>`;
 }
 
 // ---------- Texto ----------
