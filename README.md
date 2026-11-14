@@ -1,8 +1,18 @@
 ## 📄 Documentação
 
 - **Missão 1:** [Documentação de Problema e Requisitos](https://docs.google.com/document/d/1vO_w9JJw7SP1t5Hbj9CVq6umW-Kilw4n/edit?usp=sharing)
-
   
+
+  ## 🚀 Acessos e Demonstração (Ponte)
+
+Utilize os links e credenciais abaixo para testar os diferentes perfis da plataforma:
+
+| Perfil | Link de Acesso | Código de Acesso |
+| :--- | :--- | :--- |
+| **Cliente** | [Acessar Aplicação](https://ponte-orcin.vercel.app) | *Acesso livre* |
+| **Lojista** | [Acessar Painel do Lojista](https://ponte-orcin.vercel.app/loja) | `TEC204` |
+| **Administração do Shopping** | [Acessar Painel do Shopping](https://ponte-orcin.vercel.app/painel) | `SHOP2026` |
+
 
 
 
