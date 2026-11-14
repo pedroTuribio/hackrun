@@ -156,6 +156,22 @@ Achados durante os testes (não são bugs do app):
 | `t3-6-painel-reservas-por-loja.png` | Painel: reservas por loja |
 | `pc-inicio.jpg` | Tela inicial no PC |
 
+## Teste com 5 pessoas de fora do time (13–14/11/2026)
+
+Tarefa dada: *"você viu um fone na internet; use o app"*, no site publicado, sem ajuda do time. Sem nome nem dado pessoal (só a idade aproximada).
+
+| Pessoa | Idade | Conseguiu sozinha? | Tempo | Onde travou | Comentário |
+|---|---|---|---|---|---|
+| P1 | 17 | Sim | ~5 min | Não travou | "Ótimo, vai trazer muita praticidade" |
+| P2 | 20 | Sim | ~3 min | Não travou | "Gostei, bem intuitivo" |
+| P3 | 18 | Sim | ~4 min | Não travou | "É algo novo, porém bacana" |
+| P4 | 18 | Sim | ~5 min | Não travou | "Show" |
+| P5 | 21 | Sim | ~3 min | Não travou | "Interessante, estava precisando" |
+
+**Resultado:** 5 de 5 concluíram sozinhas, tempo médio de cerca de 4 min, nenhum ponto de travamento relatado.
+
+**Limitações (registradas com honestidade):** não foi anotada nota de 1 a 5; os tempos são aproximados; o grupo tem 17–21 anos, mais jovem que o público-alvo completo (18–45); não foi registrado se cada pessoa usou texto ou foto, nem quais segmentos buscaram. Como ninguém travou, este teste não gerou correções.
+
 ## Testes manuais (checklist da demo)
 
 Rodar `npm run dev` (sem chaves = memória + regras) ou abrir a URL publicada.
