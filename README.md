@@ -18,8 +18,10 @@ Utilize os links e credenciais abaixo para testar os diferentes perfis da plataf
 
 * **Pitch Deck — Ponte:** [Visualizar Slides no Canva](https://canva.link/3lgf53zyltnjrox)
 
-  
 
+  ## 🎥 Demonstração do Aplicativo (Vídeo)
+
+* **Vídeo de Apresentação e Funcionamento — Ponte:** [Assistir Demonstração](COLE_O_LINK_DO_VIDEO_AQUI)
 
 
 
