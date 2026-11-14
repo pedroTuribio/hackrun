@@ -1,4 +1,7 @@
 
+
+
+
 # Ponte — viu online, resolve hoje no shopping
 
 **HackaRun 2026 · Edição Capim Dourado Shopping · Desafio 04: Integração da jornada de compra digital e física**
