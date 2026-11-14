@@ -48,7 +48,7 @@ tests/e2e            testes Playwright
 | `SUPABASE_URL` | URL do projeto Supabase | vazio → modo memória |
 | `SUPABASE_SERVICE_ROLE_KEY` | chave service_role (só no servidor) | vazio → modo memória |
 | `GEMINI_API_KEY` | chave da API Gemini | vazio → modo regras |
-| `GEMINI_MODEL` | modelo Gemini | `gemini-flash-latest` |
+| `GEMINI_MODEL` | modelo Gemini | `gemini-3.5-flash-lite` |
 | `ADMIN_CODE` | código de acesso do painel do shopping | `SHOP2026` |
 | `DATA_MODE` | força `memory` | automático |
 | `PONTE_NO_SEED` | `1` desliga o histórico fictício do modo memória | vazio |

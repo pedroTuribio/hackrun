@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import * as ai from '../../lib/ai.js';
 
 describe('ai.js — modelo inexistente', () => {
-  test('404 no modelo configurado: tenta de novo com gemini-2.5-flash e passa a usá-lo', async () => {
+  test('404 no modelo configurado: tenta de novo com gemini-3.6-flash e passa a usá-lo', async () => {
     process.env.GEMINI_API_KEY = 'chave-falsa-de-teste';
     process.env.GEMINI_MODEL = 'modelo-que-nao-existe';
     const stub = stubFetch((url) => (url.includes('modelo-que-nao-existe')
@@ -16,11 +16,11 @@ describe('ai.js — modelo inexistente', () => {
       assert.equal(out.name, 'fone');
       assert.equal(stub.calls.length, 2);
       assert.match(stub.calls[0].url, /models\/modelo-que-nao-existe:generateContent$/);
-      assert.match(stub.calls[1].url, /models\/gemini-2\.5-flash:generateContent$/);
+      assert.match(stub.calls[1].url, /models\/gemini-3\.6-flash:generateContent$/);
 
       await ai.interpret({ query: 'fone' });
       assert.equal(stub.calls.length, 3, 'na segunda vez vai direto no modelo reserva');
-      assert.match(stub.calls[2].url, /gemini-2\.5-flash/);
+      assert.match(stub.calls[2].url, /gemini-3\.6-flash/);
     } finally {
       stub.restore();
       delete process.env.GEMINI_MODEL;

@@ -23,7 +23,7 @@ Tempo estimado: 20 a 30 minutos. Nenhuma senha ou chave deve ser colada em chat,
 1. Entre em [aistudio.google.com](https://aistudio.google.com) com uma conta Google.
 2. Clique em **Get API key** → **Create API key**.
 3. Copie a chave → será `GEMINI_API_KEY`.
-4. (Opcional) `GEMINI_MODEL`: o padrão é `gemini-flash-latest`. Se a busca por foto der erro de modelo, troque por um modelo Flash listado em [ai.google.dev/gemini-api/docs/models](https://ai.google.dev/gemini-api/docs/models).
+4. (Opcional) `GEMINI_MODEL`: o padrão é `gemini-3.5-flash-lite`. Se a busca por foto der erro de modelo, troque por um modelo Flash listado em [ai.google.dev/gemini-api/docs/models](https://ai.google.dev/gemini-api/docs/models).
 
 ## 3. GitHub
 

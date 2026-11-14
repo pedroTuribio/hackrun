@@ -106,7 +106,7 @@ describe('config.js — modos', () => {
       delete process.env.DATA_MODE;
       assert.equal(config().dataMode, 'memory');
       assert.equal(config().aiMode, 'regras');
-      assert.equal(config().geminiModel, 'gemini-flash-latest');
+      assert.equal(config().geminiModel, 'gemini-3.5-flash-lite');
       assert.equal(config().adminCode, 'SHOP2026');
     } finally {
       for (const k of ['SUPABASE_URL', 'SUPABASE_SERVICE_ROLE_KEY', 'DATA_MODE']) {

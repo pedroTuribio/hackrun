@@ -42,7 +42,7 @@ describe('ai.js — Gemini simulado (fetch falso)', () => {
     for (const c of stub.calls) {
       assert.ok(!c.url.includes('chave-falsa'), 'chave não pode ir na URL');
       assert.equal(c.init.headers['x-goog-api-key'], 'chave-falsa-de-teste');
-      assert.match(c.url, /\/models\/gemini-flash-latest:generateContent$/);
+      assert.match(c.url, /\/models\/gemini-3.5-flash-lite:generateContent$/);
     }
   });
 
