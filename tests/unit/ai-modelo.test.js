@@ -38,3 +38,38 @@ describe('ai.js — modelo inexistente', () => {
     }
   });
 });
+
+describe('ai.js — modelo sobrecarregado (503)', () => {
+  test('503 "high demand" no modelo principal: usa o próximo modelo e a busca segue com IA', async () => {
+    process.env.GEMINI_API_KEY = 'chave-falsa-de-teste';
+    process.env.GEMINI_MODEL = 'modelo-lotado';
+    ai._resetModelState();
+    const stub = stubFetch((url) => (url.includes('modelo-lotado')
+      ? new Response('{"error":{"code":503,"status":"UNAVAILABLE","message":"This model is currently experiencing high demand."}}', { status: 503 })
+      : geminiResponse({ name: 'fone', category: 'Fones de ouvido', keywords: ['fone'], confidence: 'alta' })));
+    try {
+      const out = await ai.interpret({ query: 'fone' });
+      assert.equal(out.name, 'fone');
+      assert.ok(stub.calls.length >= 2);
+      assert.match(stub.calls[0].url, /modelo-lotado/);
+      assert.doesNotMatch(stub.calls.at(-1).url, /modelo-lotado/);
+    } finally {
+      stub.restore();
+      delete process.env.GEMINI_MODEL;
+    }
+  });
+
+  test('chave inválida (400 sem "model") não troca de modelo: falha logo', async () => {
+    process.env.GEMINI_API_KEY = 'chave-falsa-de-teste';
+    process.env.GEMINI_MODEL = 'outro-modelo';
+    ai._resetModelState();
+    const stub = stubFetch(() => new Response('{"error":{"code":400,"status":"INVALID_ARGUMENT","message":"API key not valid."}}', { status: 400 }));
+    try {
+      await assert.rejects(ai.interpret({ query: 'fone' }), /API key not valid/);
+      assert.equal(stub.calls.length, 1);
+    } finally {
+      stub.restore();
+      delete process.env.GEMINI_MODEL;
+    }
+  });
+});
